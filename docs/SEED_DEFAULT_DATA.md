@@ -44,7 +44,7 @@ secrets:
 
 services:
   konga:
-    image: pantsel/konga
+    image: xiaojun207/konga
     secrets:
      - konga_user_seed
     environment:

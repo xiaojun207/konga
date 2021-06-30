@@ -1,9 +1,26 @@
-## More than just another GUI to [KONG Admin API](http://getkong.org)    [![Build Status](https://travis-ci.org/pantsel/konga.svg?branch=master)](https://travis-ci.org/pantsel/konga)    [![Gitter chat](https://badges.gitter.im/pantsel-konga/Lobby.png)](https://gitter.im/pantsel-konga/Lobby)
+## More than just another GUI to [KONG Admin API](http://getkong.org)    [![Build Status](https://travis-ci.org/xiaojun207/konga.svg?branch=master)](https://travis-ci.org/xiaojun207/konga)    [![Gitter chat](https://badges.gitter.im/xiaojun207-konga/Lobby.png)](https://gitter.im/xiaojun207-konga/Lobby)
 
 
-[![Dashboard](screenshots/bc3.png)](https://raw.githubusercontent.com/pantsel/konga/master/screenshots/bc2.png)
+[![Dashboard](screenshots/bc3.png)](https://raw.githubusercontent.com/xiaojun207/konga/master/screenshots/bc2.png)
 
 _Konga is not an official app. No affiliation with [Kong](https://www.konghq.com/)._
+
+## 增加国际化（中文）支持（Add international (Chinese) support）
+    
+    增加页面国际化，并增加中文界面支持
+    前端中文字符串位置（Frontend string）：assets/js/app/i18n/
+    后台中文字符串位置（Backend string）：config/locales/
+
+前端语言设置（Frontend language settings ）：
+
+    assets/js/app/i18n/i18n.js -> window.i18nResource = i18n_zh_CN
+    其中变量i18n_zh_CN，为assets/js/app/i18n/i18n_zh_CN.js中定义。
+
+后端语言设置（Back end language settings）:
+
+    config/i18n.js中
+    locales: ['zh'],
+    defaultLocale: 'zh',
 
 ### Support the project
 If you find Konga helpful, 
@@ -38,7 +55,7 @@ Special thanks to our supporters that help us keep the project going and the mot
 ## Discussions & Support
 If you need to discuss anything Konga related, we have a chatroom on Gitter:
 
-[![Gitter chat](https://badges.gitter.im/pantsel-konga/Lobby.png)](https://gitter.im/pantsel-konga/Lobby)
+[![Gitter chat](https://badges.gitter.im/xiaojun207-konga/Lobby.png)](https://gitter.im/xiaojun207-konga/Lobby)
 
 ## Features
 * Manage all Kong Admin API Objects.
@@ -53,7 +70,7 @@ If you need to discuss anything Konga related, we have a chatroom on Gitter:
 ## Compatibility
 **From 0.14.0 onwards, Konga is ONLY compatible with Kong 1.x**
 
-If you're on an older Kong version , use [this](https://github.com/pantsel/konga/tree/legacy) branch 
+If you're on an older Kong version , use [this](https://github.com/xiaojun207/konga/tree/legacy) branch 
 or `konga:legacy` from docker hub instead.
 
 ## Prerequisites
@@ -71,7 +88,7 @@ Install `npm` and `node.js`. Instructions can be found [here](http://sailsjs.org
 
 Install `bower`, ad `gulp` packages.
 ```
-$ git clone https://github.com/pantsel/konga.git
+$ git clone https://github.com/xiaojun207/konga.git
 $ cd konga
 $ npm i
 ```
@@ -168,13 +185,13 @@ Konga GUI will be available at `http://localhost:1337`
 The following instructions assume that you have a running Kong instance following the
 instructions from [Kong's docker hub](https://hub.docker.com/_/kong/)
 ```
-$ docker pull pantsel/konga
+$ docker pull xiaojun207/konga
 $ docker run -p 1337:1337 \
              --network {{kong-network}} \ // optional
              --name konga \
              -e "NODE_ENV=production" \ // or "development" | defaults to 'development'
              -e "TOKEN_SECRET={{somerandomstring}}" \
-             pantsel/konga
+             xiaojun207/konga
 ```
 
 #### To use one of the supported databases
@@ -193,7 +210,7 @@ argument  | description | default
 -u     | full database connection url | -
 
 ```
-$ docker run --rm pantsel/konga:latest -c prepare -a {{adapter}} -u {{connection-uri}}
+$ docker run --rm xiaojun207/konga:latest -c prepare -a {{adapter}} -u {{connection-uri}}
 ```
 
 
@@ -211,7 +228,7 @@ $ docker run -p 1337:1337
              -e "DB_PG_SCHEMA=my-schema"\ // Optionally define a schema when integrating with prostgres
              -e "NODE_ENV=production" \ // or 'development' | defaults to 'development'
              --name konga \
-             pantsel/konga
+             xiaojun207/konga
              
              
  // Alternatively you can use the full connection string to connect to a database
@@ -222,7 +239,7 @@ $ docker run -p 1337:1337
               -e "DB_URI=full-connection-uri" \
               -e "NODE_ENV=production" \ // or 'development' | defaults to 'development'
               --name konga \
-              pantsel/konga
+              xiaojun207/konga
 ```
 
 
@@ -241,7 +258,7 @@ Then stop the app and run it again in production mode.
 
 if you're using docker, you can lift an ephemeral container, as stated before:
 ```
-$ docker run --rm pantsel/konga:latest -c prepare -a {{adapter}} -u {{connection-uri}}
+$ docker run --rm xiaojun207/konga-cn:latest -c prepare -a {{adapter}} -u {{connection-uri}}
 ```
 
 ## FAQ
@@ -258,7 +275,7 @@ $ npm run bower-deps
 When a plugin property is an array, the input is handled by a chip component.
 You will need to press `enter` after every value you type in
 so that the component assigns it to an array index.
-See issue [#48](https://github.com/pantsel/konga/issues/48) for reference.
+See issue [#48](https://github.com/xiaojun207/konga/issues/48) for reference.
 
 ##### 3. EACCES permission denied, mkdir '/kongadata/'.
 If you see this error while trying to run Konga, it means that konga has no write permissions to
@@ -273,8 +290,8 @@ greater than 60000, like 120000.
 
 
 ## More Kong related stuff
-- [**Kong Admin proxy**](https://github.com/pantsel/kong-admin-proxy)
-- [**Kong Middleman plugin**](https://github.com/pantsel/kong-middleman-plugin)
+- [**Kong Admin proxy**](https://github.com/xiaojun207/kong-admin-proxy)
+- [**Kong Middleman plugin**](https://github.com/xiaojun207/kong-middleman-plugin)
 
 ## Author
 
