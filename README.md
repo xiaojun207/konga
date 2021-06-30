@@ -289,13 +289,9 @@ may take longer to complete. You can fix that by setting then env var `KONGA_HOO
 greater than 60000, like 120000.
 
 
-## More Kong related stuff
-- [**Kong Admin proxy**](https://github.com/xiaojun207/kong-admin-proxy)
-- [**Kong Middleman plugin**](https://github.com/xiaojun207/kong-middleman-plugin)
-
 ## Author
+>The project is base of https://github.com/pantsel/konga.git, I add international (Chinese) support.
 
-Panagis Tselentis
 
 ## License
 ```
