@@ -1,7 +1,7 @@
 ## More than just another GUI to [KONG Admin API](http://getkong.org)    [![Build Status](https://travis-ci.org/xiaojun207/konga.svg?branch=master)](https://travis-ci.org/xiaojun207/konga)    [![Gitter chat](https://badges.gitter.im/xiaojun207-konga/Lobby.png)](https://gitter.im/xiaojun207-konga/Lobby)
 
 
-[![Dashboard](screenshots/bc3.png)](https://raw.githubusercontent.com/xiaojun207/konga/master/screenshots/bc2.png)
+[![Dashboard](screenshots/bc3.png)](https://raw.githubusercontent.com/xiaojun207/konga/master/screenshots/bc3.png)
 
 _Konga is not an official app. No affiliation with [Kong](https://www.konghq.com/)._
 
