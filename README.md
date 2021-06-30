@@ -26,10 +26,10 @@ The project is base of https://github.com/pantsel/konga.git, I add international
 
 ### Support the project
 If you find Konga helpful, 
-you can show your support and help me continue maintaining the project by [buying me a coffee](buymeacoff.ee/F1aRIj8CG)
-or becoming a [Patron](https://www.patreon.com/kongaui). Cheers!
+you can show your support and help me continue maintaining the project by [buying me a coffee](https://github.com/xiaojun207/konga)
+or becoming a [Patron](https://github.com/xiaojun207/konga). Cheers!
 
-<a href="https://www.buymeacoffee.com/F1aRIj8CG" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+<a href="https://github.com/xiaojun207/konga" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
 
 ## Supported by
@@ -55,9 +55,8 @@ Special thanks to our supporters that help us keep the project going and the mot
 - [**License**](#license)
 
 ## Discussions & Support
-If you need to discuss anything Konga related, we have a chatroom on Gitter:
+If you need to discuss anything Konga related, you can send email to xiaojun207@126.com:
 
-[![Gitter chat](https://badges.gitter.im/xiaojun207-konga/Lobby.png)](https://gitter.im/xiaojun207-konga/Lobby)
 
 ## Features
 * Manage all Kong Admin API Objects.
