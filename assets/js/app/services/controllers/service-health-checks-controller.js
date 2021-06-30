@@ -17,7 +17,7 @@
               ServiceHCModel.update($scope.serviceHC.id,{active: $scope.serviceHC.active})
                   .then(function(updated){
 
-                      MessageService.success("Health Checks " + ($scope.serviceHC.active ? 'enabled' : 'disabled') + " ")
+                      MessageService.success(__("Health Checks") + ' ' + __($scope.serviceHC.active ? 'enabled' : 'disabled'))
                   },function(err){
                       //
                   })

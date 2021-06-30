@@ -107,7 +107,7 @@
               .post('login', credentials, {withCredentials: true})
               .then(
                 function (response) {
-                  MessageService.success('You have logged in successfully!');
+                  MessageService.success(__('You have logged in successfully!'));
                   $localStorage.credentials = response.data;
                   $rootScope.$broadcast('user.login', $localStorage.credentials)
                   $rootScope.user = response.data.user;
@@ -124,7 +124,7 @@
            */
           logout: function logout() {
             $localStorage.$reset();
-            MessageService.success('You have logged out.');
+            MessageService.success(__('You have logged out.'));
             $rootScope.user = null;
             $state.go('auth.login');
           }

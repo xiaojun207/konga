@@ -34,7 +34,7 @@
             .then(
               function onSuccess(result) {
                 $log.debug("UpdateUpstreamModalController:created upstream", result)
-                MessageService.success('Upstream updated successfully');
+                MessageService.success(__('Upstream updated successfully'));
                 $scope.busy = false;
                 $rootScope.$broadcast('kong.upstream.updated', result.data)
               }, function (err) {

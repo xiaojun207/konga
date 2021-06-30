@@ -16,9 +16,9 @@
                         parent : 'frontend',
                         cache : false,
                         data : {
-                            pageName : "Users",
+                            pageName : __("Users"),
                             //displayName : "konga users",
-                            pageDescription : "Manage Konga users and user roles"
+                            pageDescription : __("Manage Konga users and user roles")
                         },
                         views: {
                             'content@': {
@@ -56,8 +56,8 @@
                     .state('users.create', {
                         url: '/create',
                         data : {
-                            pageName : "Create User",
-                            displayName : "create",
+                            pageName : __("Create User"),
+                            displayName : __("create"),
                             pageDescription : null
                         },
                         views: {
@@ -70,8 +70,8 @@
                     .state('users.show', {
                         url: '/:id',
                         data : {
-                            pageName : "User profile",
-                            displayName : "profile",
+                            pageName : __("User profile"),
+                            displayName : __("Profile"),
                             pageDescription : null
                         },
                         views: {

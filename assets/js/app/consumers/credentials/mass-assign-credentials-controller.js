@@ -74,7 +74,7 @@
                           .finally(
                               function onFinally() {
                                   $scope.busy = false;
-                                  MessageService.success('Credentials where assigned successfully!')
+                                  MessageService.success(__('Credentials where assigned successfully!'))
                                   $rootScope.$broadcast('credentials.assigned')
                               }
                           )

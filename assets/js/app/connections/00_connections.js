@@ -16,8 +16,8 @@
                         parent : 'frontend',
                         data : {
                             access : 0,
-                            pageName : "Connections",
-                            pageDescription : "Create connections to Kong Nodes and activate the one you want use.",
+                            pageName : __("Connections"),
+                            pageDescription : __("Create connections to Kong Nodes and activate the one you want use."),
                             prefix : '<i class="mdi mdi-cast-connected"></i>'
                         },
                         views: {

@@ -31,7 +31,7 @@
                         .create(angular.copy($scope.node))
                         .then(
                             function onSuccess(result) {
-                                MessageService.success('New node created successfully');
+                                MessageService.success(__('New node created successfully'));
                                 $scope.busy = false;
                                 $rootScope.$broadcast('kong.node.created',result.data);
                                 $uibModalInstance.dismiss();
@@ -39,7 +39,7 @@
                                 $scope.busy = false
                                 console.error(err);
                                 NodeModel.handleError($scope,err);
-                                MessageService.error(_.get(err, 'data.message', 'Something went wrong...'))
+                                MessageService.error(_.get(err, 'data.message', __('Something went wrong...')))
                             }
                         )
                     ;

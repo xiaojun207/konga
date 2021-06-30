@@ -35,11 +35,11 @@
               ApiService.add($scope.api)
                   .then(function(res){
                       $rootScope.$broadcast('api.created')
-                      MessageService.success('Api created!')
+                      MessageService.success(__('Api created!'))
                       $uibModalInstance.dismiss()
                   }).catch(function(err){
                   $log.error("Create new api error:", err)
-                  MessageService.error("Submission failed. Make sure you have completed all required fields.")
+                  MessageService.error(__("Submission failed. Make sure you have completed all required fields."))
                   $scope.errors = {}
                   if(err.data && err.data.body){
                       Object.keys(err.data.body).forEach(function(key){

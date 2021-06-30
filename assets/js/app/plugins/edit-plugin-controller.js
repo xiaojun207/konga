@@ -204,7 +204,7 @@
               $log.debug("updatePlugin", res);
               $scope.busy = false;
               $rootScope.$broadcast('plugin.updated', res.data);
-              MessageService.success('"' + _plugin.name + '" plugin updated successfully!');
+              MessageService.success('"' + _plugin.name + '" ' +__('plugin updated successfully!'));
               $uibModalInstance.close({
                 data: res.data
               });

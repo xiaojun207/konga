@@ -17,8 +17,8 @@
             url: '/services',
             data: {
               activeNode: true,
-              pageName: "Services",
-              pageDescription: "Service entities, as the name implies, are abstractions of each of your own upstream services. Examples of Services would be a data transformation microservice, a billing API, etc.",
+              pageName: __("Services"),
+              pageDescription: __("Service entities, as the name implies, are abstractions of each of your own upstream services. Examples of Services would be a data transformation microservice, a billing API, etc."),
               //displayName : "services",
               prefix: '<i class="material-icons">cloud_queue</i>'
             },
@@ -32,9 +32,9 @@
           .state('services.read', {
             url: '/:service_id/read',
             data: {
-              pageName: "Show Service",
+              pageName: __("Show Service"),
               pageDescription: "",
-              displayName: "show",
+              displayName: __("show"),
               prefix: '<i class="mdi mdi-pencil"></i>'
             },
             views: {
@@ -107,8 +107,8 @@
               service: {}
             },
             data: {
-              pageName: "Service Plugins",
-              displayName: "Service plugins"
+              pageName: __("Service Plugins"),
+              displayName: __("Service plugins")
             },
             views: {
               'content@': {
@@ -143,8 +143,8 @@
           .state('services.plugins.manage', {
             url: '/manage',
             data: {
-              pageName: "Manage Service Plugins",
-              displayName: "manage"
+              pageName: __("Manage Service Plugins"),
+              displayName: __("manage")
             },
             views: {
               'content@': {

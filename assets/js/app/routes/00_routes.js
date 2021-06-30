@@ -17,10 +17,10 @@
             url: '/routes',
             data: {
               activeNode: true,
-              pageName: "Routes",
+              pageName: __("Routes"),
               pageDescription: "" +
-              "The Route entities defines rules to match client requests. Each Route is associated with a Service, and a Service may have multiple Routes associated to it. Every request matching a given Route will be proxied to its associated Service.",
-              //displayName : "routes",
+              __("The Route entities defines rules to match client requests. Each Route is associated with a Service, and a Service may have multiple Routes associated to it. Every request matching a given Route will be proxied to its associated Service."),
+              //displayName : __("Routes"),
               prefix: '<i class="material-icons">cloud_queue</i>'
             },
             views: {
@@ -42,9 +42,9 @@
           .state('routes.read', {
             url: '/:route_id/read',
             data: {
-              pageName: "Route",
+              pageName: __("Route"),
               pageDescription: "",
-              displayName: "route",
+              displayName: __("Route"),
               prefix: '<i class="mdi mdi-pencil"></i>'
             },
             views: {
@@ -109,8 +109,8 @@
               route : {}
             },
             data : {
-                pageName : "Route Plugins",
-                displayName : "Route plugins"
+                pageName : __("Route Plugins"),
+                displayName : __("Route plugins")
             },
             views: {
                 'content@': {
@@ -145,8 +145,8 @@
         .state('routes.plugins.manage', {
             url: '/manage',
             data : {
-                pageName : "Manage Route Plugins",
-                displayName : "manage"
+                pageName : __("Manage Route Plugins"),
+                displayName : __("manage")
             },
             views: {
                 'content@': {

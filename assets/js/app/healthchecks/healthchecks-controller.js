@@ -174,7 +174,7 @@
 
           if (!$scope.user.hasPermission('healthchecks', 'update')) {
 
-            MessageService.error("You don't have permissions to perform this action")
+            MessageService.error(__("You don't have permissions to perform this action"))
             return false;
           }
 
@@ -201,7 +201,7 @@
                 .then(
                   function onSuccess(data) {
                     if (data.status < 204) {
-                      MessageService.success('HealthCheck deleted successfully');
+                      MessageService.success(__('HealthCheck deleted successfully'));
                       $rootScope.$broadcast('api.healthcheck.deleted', item);
                       _triggerFetchData();
                     }

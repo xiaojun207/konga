@@ -61,7 +61,7 @@
 
                 ConsumerModel.create(data)
                   .then(function (res) {
-                    MessageService.success("Consumer created successfully!")
+                    MessageService.success(__("Consumer created successfully!"))
                     $rootScope.$broadcast('consumer.created', res.data)
                     close()
                     // Navigate to the newly created consumers page

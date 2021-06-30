@@ -102,7 +102,7 @@
                 .removeCredential($scope.consumer.id, 'hmac-auth', credentials.id)
                 .then(
                   function onSuccess(result) {
-                    MessageService.success('Credentials deleted successfully');
+                    MessageService.success(__('Credentials deleted successfully'));
                     fetchHMACAuthCredentials()
                   }
                 )
@@ -120,7 +120,7 @@
                 .removeCredential($scope.consumer.id, 'basic-auth', credentials.id)
                 .then(
                   function onSuccess(result) {
-                    MessageService.success('Credentials deleted successfully');
+                    MessageService.success(__('Credentials deleted successfully'));
                     fetchBasicAuthCredentials()
                   }
                 )
@@ -138,7 +138,7 @@
                 .removeCredential($scope.consumer.id, 'oauth2', oauth.id)
                 .then(
                   function onSuccess(result) {
-                    MessageService.success('OAuth2 deleted successfully');
+                    MessageService.success(__('OAuth2 deleted successfully'));
                     fetchOAuth2()
                   }
                 )
@@ -156,7 +156,7 @@
                 .removeCredential($scope.consumer.id, 'jwt', jwt.id)
                 .then(
                   function onSuccess(result) {
-                    MessageService.success('JWT deleted successfully');
+                    MessageService.success(__('JWT deleted successfully'));
                     fetchJWTs()
                   }
                 )
@@ -174,7 +174,7 @@
                 .removeCredential($scope.consumer.id, 'key-auth', key.id)
                 .then(
                   function onSuccess(result) {
-                    MessageService.success('Key deleted successfully');
+                    MessageService.success(__('Key deleted successfully'));
                     fetchKeys()
                   }
                 )
@@ -276,7 +276,7 @@
             .then(function (res) {
               $log.debug(res.data)
               $scope.consumer = res.data
-              MessageService.success("Consumer updated successfully!")
+              MessageService.success(__("Consumer updated successfully!"))
             }).catch(function (err) {
             $log.error("Failed to update consumer", err)
             $scope.errors = err.data.customMessage || {}

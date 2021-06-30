@@ -3,14 +3,14 @@
         <div class="col-md-6 text-left">
             <h4>
                 <i class="mdi mdi-plug"></i>
-                Assigned plugins
+                {{__('Assigned plugins')}}
 
             </h4>
         </div>
         <div class="col-md-6 text-right">
             <button class="btn btn-primary btn-flat" style="margin-top: 5px" ng-click="onAddPlugin()">
                 <i class="mdi mdi-plus"></i>
-                add plugin
+                {{__('add plugin')}}
             </button>
         </div>
     </div>
@@ -74,7 +74,7 @@
     </tr>
     <tr data-ng-if="plugins.data.length === 0">
         <td colspan="100%" class="text-center text-muted">
-            <em>no data found...</em>
+            <em>{{ __('no data found...')}}</em>
         </td>
     </tr>
 </table>

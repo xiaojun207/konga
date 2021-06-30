@@ -97,7 +97,7 @@
                   targetModel.create($scope.item)
                     .then(function (resp) {
                       $log.debug("Create target =>", resp)
-                      MessageService.success("Target added successfully!")
+                      MessageService.success(__("Target added successfully!"))
                       $uibModalInstance.dismiss({
                         data: resp
                       })
@@ -175,12 +175,12 @@
           console.log("@@@@@@@@@@@@@@@@@@@@@@@@@");
           $http.post(`kong/upstreams/${$stateParams.id}/targets/${target.id}/${healthy ? 'healthy' : 'unhealthy'}`)
             .then(res => {
-              MessageService.success(`Target ${target.target} is set to ${healthy ? 'healthy' : 'unhealthy'}`);
+              MessageService.success(__('Target {0} is set to ', target.target) + __(healthy ? 'healthy' : 'unhealthy'));
               target.health = healthy ? 'HEALTHY' : 'UNHEALTHY';
             })
             .catch(err => {
               console.error(err);
-              MessageService.error('Something went wrong...');
+              MessageService.error(__('Something went wrong...'));
             })
         }
 

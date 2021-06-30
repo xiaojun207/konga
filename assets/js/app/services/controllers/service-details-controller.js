@@ -38,7 +38,7 @@
             .then(function (res) {
               console.log("Update Service: ", res)
               $scope.loading = false
-              MessageService.success('Service updated successfully!');
+              MessageService.success(__('Service updated successfully!'));
               originalService = res.data; // ref. monkey patch
             }).catch(function (err) {
             console.log("err", err)

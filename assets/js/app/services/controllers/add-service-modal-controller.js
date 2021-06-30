@@ -34,7 +34,7 @@
           ServiceService.add($scope.service)
             .then(function (res) {
               $rootScope.$broadcast('service.created')
-              MessageService.success('Service created!')
+              MessageService.success(__('Service created!'))
               $uibModalInstance.dismiss()
             }).catch(function (err) {
             $log.error("Create new service error:", err)
@@ -52,7 +52,7 @@
               $scope.errorMessage = "An unknown error has occured"
             }
 
-            MessageService.error($scope.errorMessage || "Submission failed. Make sure you have completed all required fields.")
+            MessageService.error($scope.errorMessage || __("Submission failed. Make sure you have completed all required fields."))
           })
         }
 

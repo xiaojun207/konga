@@ -1,5 +1,5 @@
 <div class="form-group" ng-class="{'has-error' : errors.name}">
-    <label class="col-sm-4 control-label">Name <br><em><small class="help-block">optional</small></em></label>
+    <label class="col-sm-4 control-label">{{__('Name')}} <br><em><small class="help-block">{{__('optional')}}</small></em></label>
     <div class="col-sm-7">
         <input ng-model="service.name" class="form-control">
         <div class="text-danger" ng-if="errors.name" data-ng-bind="errors.name"></div>
@@ -9,14 +9,14 @@
 
 <!-- EXTRAS -->
 <div class="form-group">
-    <label class="col-sm-4 control-label">Description <br><em><small class="help-block">optional</small></em></label>
+    <label class="col-sm-4 control-label">Description <br><em><small class="help-block">{{__('optional')}}</small></em></label>
     <div class="col-sm-7">
         <input ng-model="service.extras.description" class="form-control">
         <p class="help-block">An optional service description.</p>
     </div>
 </div>
 <div class="form-group">
-    <label class="col-sm-4 control-label">Tags <br><em><small class="help-block">optional</small></em></label>
+    <label class="col-sm-4 control-label">Tags <br><em><small class="help-block">{{__('optional')}}</small></em></label>
     <div class="col-sm-7" ng-if="isGatewayVersionEqOrGreater('1.1.0-rc1')">
         <chips ng-model="service.tags">
             <chip-tmpl>
@@ -65,7 +65,7 @@
 </div>
 
 <div class="form-group" ng-class="{'has-error' : errors.protocol}">
-    <label class="col-sm-4 control-label">Protocol <br><em><small class="help-block">semi-optional</small></em></label>
+    <label class="col-sm-4 control-label">Protocol <br><em><small class="help-block">{{ __('semi-optional')}}</small></em></label>
     <div class="col-sm-7">
         <input ng-model="service.protocol" class="form-control">
         <div class="text-danger" ng-if="errors.protocol" data-ng-bind="errors.protocol"></div>
@@ -74,7 +74,7 @@
 </div>
 
 <div class="form-group" ng-class="{'has-error' : errors.host}">
-    <label class="col-sm-4 control-label">Host <br><em><small class="help-block">semi-optional</small></em></label>
+    <label class="col-sm-4 control-label">Host <br><em><small class="help-block">{{ __('semi-optional')}}</small></em></label>
     <div class="col-sm-7">
         <input ng-model="service.host" class="form-control">
         <div class="text-danger" ng-if="errors.host" data-ng-bind="errors.host"></div>
@@ -83,7 +83,7 @@
 </div>
 
 <div class="form-group" ng-class="{'has-error' : errors.port}">
-    <label class="col-sm-4 control-label">Port <br><em><small class="help-block">semi-optional</small></em></label>
+    <label class="col-sm-4 control-label">Port <br><em><small class="help-block">{{ __('semi-optional')}}</small></em></label>
     <div class="col-sm-7">
         <input type="number" ng-model="service.port" class="form-control">
         <div class="text-danger" ng-if="errors.port" data-ng-bind="errors.port"></div>
@@ -93,7 +93,7 @@
 
 
 <div class="form-group" ng-class="{'has-error' : errors.path}">
-    <label class="col-sm-4 control-label">Path <br><em><small class="help-block">optional</small></em></label>
+    <label class="col-sm-4 control-label">Path <br><em><small class="help-block">{{__('optional')}}</small></em></label>
     <div class="col-sm-7">
         <input ng-model="service.path" class="form-control">
         <div class="text-danger" ng-if="errors.path" data-ng-bind="errors.path"></div>
@@ -102,7 +102,7 @@
 </div>
 
 <div class="form-group" ng-class="{'has-error' : errors.retries}">
-    <label class="col-sm-4 control-label">Retries <br><em><small class="help-block">optional</small></em></label>
+    <label class="col-sm-4 control-label">Retries <br><em><small class="help-block">{{__('optional')}}</small></em></label>
     <div class="col-sm-7">
         <input type="number" ng-model="service.retries" class="form-control">
         <div class="text-danger" ng-if="errors.retries" data-ng-bind="errors.retries"></div>
@@ -111,7 +111,7 @@
 </div>
 
 <div class="form-group" ng-class="{'has-error' : errors.connect_timeout}">
-    <label class="col-sm-4 control-label">Connect timeout <br><em><small class="help-block">optional</small></em></label>
+    <label class="col-sm-4 control-label">Connect timeout <br><em><small class="help-block">{{__('optional')}}</small></em></label>
     <div class="col-sm-7">
         <input type="number" ng-model="service.connect_timeout" class="form-control">
         <div class="text-danger" ng-if="errors.connect_timeout" data-ng-bind="errors.connect_timeout"></div>
@@ -120,7 +120,7 @@
 </div>
 
 <div class="form-group" ng-class="{'has-error' : errors.write_timeout}">
-    <label class="col-sm-4 control-label">Write timeout <br><em><small class="help-block">optional</small></em></label>
+    <label class="col-sm-4 control-label">Write timeout <br><em><small class="help-block">{{__('optional')}}</small></em></label>
     <div class="col-sm-7">
         <input type="number" ng-model="service.write_timeout" class="form-control">
         <div class="text-danger" ng-if="errors.write_timeout" data-ng-bind="errors.write_timeout"></div>
@@ -128,7 +128,7 @@
     </div>
 </div>
 <div class="form-group" ng-class="{'has-error' : errors.read_timeout}">
-    <label class="col-sm-4 control-label">Read timeout <br><em><small class="help-block">optional</small></em></label>
+    <label class="col-sm-4 control-label">Read timeout <br><em><small class="help-block">{{__('optional')}}</small></em></label>
     <div class="col-sm-7">
         <input type="number" ng-model="service.read_timeout" class="form-control">
         <div class="text-danger" ng-if="errors.read_timeout" data-ng-bind="errors.read_timeout"></div>
@@ -137,7 +137,7 @@
 </div>
 
 <div class="form-group" ng-class="{'has-error' : errors.client_certificate}">
-    <label class="col-sm-4 control-label">Client certificate <br><em><small class="help-block">optional</small></em></label>
+    <label class="col-sm-4 control-label">Client certificate <br><em><small class="help-block">{{__('optional')}}</small></em></label>
     <div class="col-sm-7">
         <input type="text" ng-model="service.client_certificate.id" class="form-control">
         <div class="text-danger" ng-if="errors.client_certificate" data-ng-bind="errors.client_certificate"></div>

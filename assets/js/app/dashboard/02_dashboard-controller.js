@@ -57,9 +57,9 @@
               $scope.data = {
                   server : {
                       labels : [
-                          'Accepted',
-                          'Handled',
-                          'Total Requests'
+                          __('Accepted'),
+                          __('Handled'),
+                          __('Total Requests')
                       ],
                       options: {
                           scales: {
@@ -86,10 +86,10 @@
                   },
                   activity : {
                       labels : [
-                          'Active',
-                          'Reading',
-                          'Waiting',
-                          'Writing',
+                          __('Active'),
+                          __('Reading'),
+                          __('Waiting'),
+                          __('Writing'),
                       ],
                       options: {
                           scales: {
@@ -119,8 +119,8 @@
                   },
                   timers : {
                       labels : [
-                          'Pending',
-                          'Running'
+                          __('Pending'),
+                          __('Running')
                       ],
                       options : {
                           yAxes: [{
@@ -189,7 +189,7 @@
                               nextLoad(++errorCount * 2 * loadTime);
                               $scope.error = true
                               $scope.alert = {
-                                  msg : 'You have to setup and activate a node in order to connect to Kong\'s admin API. You can do that in <a href="/admin/settings"><strong>settings</strong></a>',
+                                  msg : __('You have to setup and activate a node in order to connect to Kong\'s admin API. You can do that in <a href="/admin/settings"><strong>settings</strong></a>'),
                                   type : 'warning'
                               }
                           }
@@ -219,8 +219,8 @@
                   .create(angular.copy($scope.node))
                   .then(
                       function onSuccess(result) {
-                          $log.info('New node created successfully',result)
-                          MessageService.success('New node created successfully');
+                          $log.info(__('New node created successfully'),result)
+                          MessageService.success(__('New node created successfully'));
 
                           var created = result.data[0] || result.data;
                           $rootScope.$broadcast('kong.node.created',created)
@@ -257,7 +257,7 @@
                                       },function(err){
                                           $scope.busy = false
                                           UserModel.handleError($scope,err)
-                                          MessageService.error(_.get(err, 'data.message', 'Something went wrong...'))
+                                          MessageService.error(_.get(err, 'data.message', __('Something went wrong...')))
                                       }
                                     );
                               }
@@ -272,7 +272,7 @@
                         console.log(err);
                         $scope.busy = false
                         NodeModel.handleError($scope,err)
-                        MessageService.error(_.get(err, 'data.message', 'Something went wrong...'))
+                        MessageService.error(_.get(err, 'data.message', __('Something went wrong...')))
                       }
                   )
               ;
@@ -300,7 +300,7 @@
           }
 
 
-          
+
 
           var cancelNextLoad = function() {
               $timeout.cancel(loadPromise);

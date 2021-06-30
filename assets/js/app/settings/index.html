@@ -4,17 +4,17 @@
         <div class="col-md-12">
             <hr>
             <h3>
-                General settings
+                {{__('General settings')}}
             </h3>
             <hr>
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
                         <label>
-                            Dashboard refresh interval
+                            {{__('Dashboard refresh interval')}}
                         </label>
                         <input type="number" class="form-control" data-ng-model="KONGA_CONFIG.info_polling_interval">
-                        <p class="help-block">The interval in milliseconds at which the Dashboard data will refresh. If set to 0, polling will be disabled.</p>
+                        <p class="help-block">{{__('The interval in milliseconds at which the Dashboard data will refresh. If set to 0, polling will be disabled.')}}</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -37,7 +37,7 @@
         <div class="col-md-12">
             <hr>
             <h3>
-                Sign up restrictions
+                {{ __('Sign up restrictions')}}
             </h3>
             <hr>
             <div class="form-group">
@@ -48,9 +48,9 @@
                                 <input type="checkbox" ng-change="updateKongaSettings()" ng-model="KONGA_CONFIG.signup_enable">
                             </label>
                             <p>
-                                Allow users to sign up.
+                                {{__('Allow users to sign up.')}}
                                 <br>
-                                <span class="help-block">If enabled, users will be allowed to sign up.</span>
+                                <span class="help-block">{{__('If enabled, users will be allowed to sign up.')}}</span>
                             </p>
                         </div>
                     </li>
@@ -60,9 +60,9 @@
                                 <input type="checkbox" ng-change="updateKongaSettings()" ng-model="KONGA_CONFIG.signup_require_activation">
                             </label>
                             <p>
-                                Send activation email.
+                                {{ __('Send activation email.') }}
                                 <br>
-                                <span class="help-block">If enabled, an activation email will be sent to the user. If not, the user will be activated automatically.</span>
+                                <span class="help-block">{{__('If enabled, an activation email will be sent to the user. If not, the user will be activated automatically.')}}</span>
                             </p>
                         </div>
                     </li>
@@ -76,7 +76,7 @@
     <div class="row">
         <div class="col-md-12">
             <hr>
-            <h3>Notifications</h3>
+            <h3>{{ __('Notifications')}}</h3>
             <hr>
 
 
@@ -147,13 +147,13 @@
                 </uib-tab>
                 <uib-tab index="1">
                     <uib-tab-heading>
-                        3RD-PARTY INTEGRATIONS
+                        {{__('3RD-PARTY INTEGRATIONS')}}
                     </uib-tab-heading>
                     <br>
                     <div class="row">
                         <div class="col-md-12">
                             <p class="help-block">
-                                Integrate Konga with 3rd party applications.
+                                {{__('Integrate Konga with 3rd party applications.')}}
                             </p>
                             <hr>
                             <div class="row">
@@ -205,8 +205,8 @@
             <br>
             <div class="row">
                 <div class="col-md-12">
-                    <h5>Notify Administrators when</h5>
-                    <p class="text-muted">Notifications will be sent to emails and integrated applications.</p>
+                    <h5>{{__('Notify Administrators when')}}</h5>
+                    <p class="text-muted">{{__('Notifications will be sent to emails and integrated applications.')}}</p>
                     <div class="table-responsive">
                         <table class="table table-hover">
                             <tr
@@ -238,7 +238,7 @@
         <div class="col-md-12">
             <hr>
             <h3>
-                User permissions
+                {{ __('User permissions')}}
             </h3>
             <hr>
             <div class="row" data-ng-repeat="(context,permissions) in KONGA_CONFIG.user_permissions">
@@ -259,7 +259,7 @@
     <div class="row">
         <div class="col-md-12">
             <button class="btn btn-primary btn-block">
-                save settings
+                {{ __('save settings') }}
             </button>
         </div>
     </div>

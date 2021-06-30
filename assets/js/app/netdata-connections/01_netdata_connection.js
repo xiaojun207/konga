@@ -16,8 +16,8 @@
                 //         parent: 'frontend',
                 //         data: {
                 //             access: 0,
-                //             pageName: "Settings",
-                //             displayName: "settings",
+                //             pageName: __("Settings"),
+                //             displayName: __("settings"),
                 //             prefix: '<i class="mdi mdi-settings"></i>'
                 //         },
                 //         views: {

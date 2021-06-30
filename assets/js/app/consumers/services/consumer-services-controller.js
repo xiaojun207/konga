@@ -164,7 +164,7 @@
 
             }).catch(err => {
             $scope.loading = false;
-            MessageService.error(`Something went wrong...`)
+            MessageService.error(__(`Something went wrong...`))
           });
 
         }
@@ -189,7 +189,7 @@
         //     }).catch(err => {
         //     $scope.loading = false;
         //     $scope.loadingRoutes = false;
-        //     MessageService.error(`Something went wrong...`)
+        //     MessageService.error(__(`Something went wrong...`))
         //   });
         //
         // }

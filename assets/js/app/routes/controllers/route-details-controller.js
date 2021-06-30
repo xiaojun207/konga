@@ -106,7 +106,7 @@
             .then(function (res) {
               $log.debug("Update Route: ", res)
               $scope.loading = false
-              MessageService.success('Route updated successfully!')
+              MessageService.success(__('Route updated successfully!'))
             }).catch(function (err) {
             console.log("err", err)
             $scope.loading = false

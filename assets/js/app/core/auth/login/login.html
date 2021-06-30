@@ -1,4 +1,4 @@
-<p class="help-block">Sign in to continue</p>
+<p class="help-block">{{__('Sign in to continue')}}</p>
 <br><br>
 <form name="loginForm" method="post" novalidate="novalidate">
     <div class="form-group"
@@ -10,12 +10,13 @@
                 <i class="mdi mdi-account-circle"></i>
             </span>
             <input type="text" name="username" class="form-control username"
-                   placeholder="Username or Email" autocomplete="off" required="required"
+                   placeholder="{{ __('Username or Email') }}" autocomplete="off" required="required"
                    data-ng-model="credentials.identifier"
             />
         </div>
 
-        <p class="help-block no-margin text-left" ng-show="loginForm.username.$touched && loginForm.username.$error.required">Username or Email is required.</p>
+        <p class="help-block no-margin text-left" ng-show="loginForm.username.$touched && loginForm.username.$error.required">
+            {{__('Username or Email is required.')}}</p>
 
     </div>
 
@@ -29,12 +30,12 @@
             </span>
             <input autocomplete="new-password" type="password" name="password"
                    class="form-control password"
-                   placeholder="Password" required="required"
+                   placeholder="{{ __('Password') }}" required="required"
                    data-ng-model="credentials.password"
             />
         </div>
 
-        <p class="help-block no-margin text-left" ng-show="loginForm.password.$touched && loginForm.password.$error.required">Password is required.</p>
+        <p class="help-block no-margin text-left" ng-show="loginForm.password.$touched && loginForm.password.$error.required">{{ __('Password is required.') }}</p>
 
 
     </div>
@@ -43,10 +44,11 @@
         <button class="btn btn-primary btn-flat btn-block"
                 data-ng-click="login()"
                 data-ng-disabled="!loginForm.$valid || busy"
+                i18n
         >
-            Sign in
+            {{ __('Sign in') }}
         </button>
     </div>
 </form>
 
-<p data-ng-if="KONGA_CONFIG.signup_enable" class="text-center text-small help-block">Don't have an account? <a ui-sref="auth.signup">Sign up!</a></p>
+<p data-ng-if="KONGA_CONFIG.signup_enable" class="text-center text-small help-block">{{ __('Don't have an account?')}} <a ui-sref="auth.signup">{{ __('Sign up!')}}</a></p>

@@ -30,7 +30,7 @@
                   .create(angular.copy($scope.user))
                   .then(
                       function onSuccess(result) {
-                          MessageService.success('New user created successfully');
+                          MessageService.success(__('New user created successfully'));
                           $scope.busy = false;
                           $state.go('users.show', {id: result.data.id});
                       },function(err){

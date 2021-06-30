@@ -30,7 +30,7 @@
                 <li  data-ng-show="isAuthenticated()" uib-dropdown is-open="isOpen" auto-close="disabled" keyboard-nav>
                     <a class="clickable" uib-dropdown-toggle>
                         <i class="mdi mdi-18px mdi-cast-connected"></i>
-                        Connected to
+                        {{__('Connected to')}}
                         <strong>{{user.node ? user.node.name : 'N/A'}}</strong>
                     </a>
                     <ul class="dropdown-menu animated fadeInUpShort go panel panel-primary-outside" uib-dropdown-menu role="menu" aria-labelledby="simple-btn-keyboard-nav">
@@ -38,7 +38,7 @@
 
                             <a>
 
-                                Choose connection
+                                {{__('Choose connection')}}
                                 <i class="mdi mdi-close pull-right clickable" data-ng-click="isOpen = !isOpen"></i>
                             </a>
                         </li>

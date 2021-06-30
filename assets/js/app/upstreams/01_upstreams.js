@@ -16,8 +16,8 @@
                         url: '/upstreams',
                         data : {
                             activeNode : true,
-                            pageName : "Upstreams",
-                            pageDescription : "The upstream object represents a virtual hostname and can be used to loadbalance incoming requests over multiple services (targets). So for example an upstream named <code>service.v1.xyz</code> with an API object created with an <code>upstream_url=https://service.v1.xyz/some/path</code>. Requests for this API would be proxied to the targets defined within the upstream.",
+                            pageName : __("Upstreams"),
+                            pageDescription : __("The upstream object represents a virtual hostname and can be used to loadbalance incoming requests over multiple services (targets). So for example an upstream named <code>service.v1.xyz</code> with an API object created with an <code>upstream_url=https://service.v1.xyz/some/path</code>. Requests for this API would be proxied to the targets defined within the upstream."),
                             //displayName : "upstreams",
                             prefix : '<i class="material-icons">&#xE8F2;</i>'
                         },
@@ -31,8 +31,8 @@
                     .state('upstreams.edit', {
                         url: '/:id',
                         data : {
-                            pageName : "Edit Upstream",
-                            displayName : "edit",
+                            pageName : __("Edit Upstream"),
+                            displayName : __("edit"),
                             pageDescription : null,
                             prefix : '<i class="material-icons">&#xE8F2;</i>'
                         },

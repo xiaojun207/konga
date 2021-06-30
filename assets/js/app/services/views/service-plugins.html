@@ -1,14 +1,14 @@
 <div class="col-md-12 bg-light-grey padding margin-bottom">
     <div class="col-md-6 text-left">
         <h4>
-            Assigned plugins
+            {{__('Assigned plugins')}}
 
         </h4>
     </div>
     <div class="col-md-6 text-right" ng-if="canCreate">
         <button class="btn btn-primary btn-flat" style="margin-top: 5px" ng-click="onAddPlugin()">
             <i class="mdi mdi-plus"></i>
-            add plugin
+            {{__('add plugin')}}
         </button>
     </div>
 </div>
@@ -20,7 +20,7 @@
         <div class="input-group-addon">
             <i class="mdi mdi-magnify"></i>
         </div>
-        <input type="text" data-ng-model="search" class="form-control" placeholder="search plugins...">
+        <input type="text" data-ng-model="search" class="form-control" placeholder="{{__('search plugins...')}}">
     </div>
     <dir-pagination-controls class="pull-right"></dir-pagination-controls>
 </div>
@@ -31,7 +31,7 @@
         <th width="1"></th>
         <th width="1"></th>
         <th>Name</th>
-        <th>Consumer</th>
+        <th>{{__('Consumer')}}</th>
         <th>Created</th>
         <th width="1" ng-if="canDelete"></th>
     </tr>
@@ -62,20 +62,20 @@
         </th>
         <td>
             <a data-ng-if="item.consumer_id" data-ui-sref="consumers.edit({id:item.consumer_id})">{{item.consumer_id}}</a>
-            <span data-ng-if="!item.consumer_id" >All consumers</span>
+            <span data-ng-if="!item.consumer_id" >{{__('All consumers')}}</span>
         </td>
         <td>{{item.created_at*1000 | date : format : timezone}}</td>
 
         <td ng-if="canDelete">
             <button class="btn btn-link btn-danger" ng-click="deletePlugin(item)">
                 <i class="mdi mdi-delete"></i>
-                delete
+                {{__('Delete')}}
             </button>
         </td>
     </tr>
     <tr data-ng-if="plugins.data.length === 0">
         <td colspan="100%" class="text-center text-muted">
-            <em>no data found...</em>
+            <em>{{ __('no data found...')}}</em>
         </td>
     </tr>
 </table>

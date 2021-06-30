@@ -17,7 +17,7 @@
               RouteHCModel.update($scope.routeHC.id,{active: $scope.routeHC.active})
                   .then(function(updated){
 
-                      MessageService.success("Health Checks " + ($scope.routeHC.active ? 'enabled' : 'disabled') + " ")
+                      MessageService.success(__("Health Checks") + " " + __($scope.routeHC.active ? 'enabled' : 'disabled') + " ")
                   },function(err){
                       //
                   })
@@ -27,7 +27,7 @@
               if(!$scope.routeHC.health_check_endpoint) return false;
               RouteHCModel.update($scope.routeHC.id,$scope.routeHC)
                   .then(function(updated){
-                      MessageService.success("Route health checks updated!")
+                      MessageService.success(__("Route health checks updated!"))
                   },function(err){
                       //
                   })

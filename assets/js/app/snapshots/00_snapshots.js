@@ -16,10 +16,10 @@
                         parent : 'frontend',
                         data : {
                             access : 2,
-                            pageName : "Snapshots",
-                            pageDescription : "Take snapshots of currently active nodes." +
-                            "<br>All <code>Services</code>, <code>Routes</code>, <code>APIs</code>, " +
-                            "<code>Plugins</code>, <code>Consumers</code>, <code>Upstreams</code> and <code>Targets</code>will be saved and available for later import.",
+                            pageName : __("Snapshots"),
+                            pageDescription : __("Take snapshots of currently active nodes.") +
+                            "<br>"+__('All')+" <code>"+__('Services')+"</code>, <code>"+__('Routes')+"</code>, <code>"+__('APIs')+"</code>, " +
+                            "<code>"+__('Plugins')+"</code>, <code>"+__('Consumers')+"</code>, <code>"+__('Upstreams')+"</code> and <code>"+__('Targets')+"</code>"+__("will be saved and available for later import."),
                             prefix : '<i class="mdi mdi-camera"></i>'
                         },
                         views: {
@@ -43,8 +43,8 @@
                         parent : 'snapshots',
                         data : {
                             access :  2,
-                            pageName : "Snapshot Details",
-                            displayName : "snapshot details",
+                            pageName : __("Snapshot Details"),
+                            displayName : __("snapshot details"),
                             pageDescription : null,
                             prefix : '<i class="mdi mdi-36px mdi-camera"></i>'
                         },

@@ -18,7 +18,7 @@
                         data : {
                             //activeNode : true,
                             //access: 1,
-                            pageName : "Dashboard",
+                            pageName : __("Dashboard"),
                             //displayName : "dashboard",
                             prefix : '<i class="material-icons text-primary">dashboard</i>'
                         },

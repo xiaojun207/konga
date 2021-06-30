@@ -3,7 +3,7 @@
     <uib-tabset active="activeJustified" justified="true">
         <uib-tab index="0" ng-click="node.type='default'">
             <uib-tab-heading>
-                DEFAULT
+                {{__('DEFAULT')}}
             </uib-tab-heading>
             <br>
             <div class="alert alert-info text-small">
@@ -15,7 +15,7 @@
         </uib-tab>
         <uib-tab index="1" ng-click="node.type='key_auth'">
             <uib-tab-heading>
-                KEY AUTH
+                {{__('KEY AUTH')}}
             </uib-tab-heading>
             <br>
             <div class="alert alert-info text-small">
@@ -26,7 +26,7 @@
         </uib-tab>
         <uib-tab index="2" ng-click="node.type='jwt'">
             <uib-tab-heading>
-                JWT AUTH
+                {{__('JWT AUTH')}}
             </uib-tab-heading>
             <br>
             <div class="alert alert-info text-small">
@@ -110,9 +110,9 @@
             <i class="mdi mdi-check" ng-if="!busy"></i>
             <fading-circle-spinner class="spinner spinner-invert pull-left" ng-if="busy"></fading-circle-spinner>
 
-            <span ng-if="busy && checkingConnection">Checking Connection</span>
-            <span ng-if="busy && !checkingConnection">Creating</span>
-            <span ng-if="!busy && !checkingConnection">create connection</span>
+            <span ng-if="busy && checkingConnection">{{ __('Checking Connection') }}</span>
+            <span ng-if="busy && !checkingConnection">{{ __('Creating') }}</span>
+            <span ng-if="!busy && !checkingConnection">{{ __('create connection') }}</span>
         </button>
     </div>
 </form>

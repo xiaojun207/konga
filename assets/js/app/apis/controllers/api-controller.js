@@ -20,17 +20,17 @@
         $scope.activeSection = 0;
         $scope.sections = [
           {
-            name: 'API Details',
+            name: __('API Details'),
             icon: 'mdi mdi-information-outline',
             isVisible: true
           },
           {
-            name: 'Plugins',
+            name: __('Plugins'),
             icon: 'mdi mdi-power-plug',
             isVisible: true
           },
           {
-            name: 'Health Checks',
+            name: __('Health Checks'),
             icon: 'mdi mdi-heart-pulse',
             isVisible: true
           },

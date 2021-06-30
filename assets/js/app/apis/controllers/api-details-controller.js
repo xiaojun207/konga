@@ -22,7 +22,7 @@
                   .then(function(res){
                       $log.debug("Update Api: ",res)
                       $scope.loading = false
-                      MessageService.success('API updated successfully!')
+                      MessageService.success(__('API updated successfully!'))
                   }).catch(function(err){
                       console.log("err",err)
                   $scope.loading = false

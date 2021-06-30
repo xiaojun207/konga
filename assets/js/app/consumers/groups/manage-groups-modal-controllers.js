@@ -53,7 +53,7 @@
                                                   $scope.errors[key] = result.data.invalidAttributes[key][0].message
                                               }
                                           }else{
-                                              MessageService.success('New group created successfully');
+                                              MessageService.success(__('New group created successfully'));
                                               $rootScope.$broadcast('kong.group.created',result)
                                               close()
                                           }

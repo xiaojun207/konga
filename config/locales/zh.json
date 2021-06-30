@@ -1,0 +1,21 @@
+{
+  "Error.Passport.Password.Wrong": "哇，密码不对！",
+  "Error.Passport.Password.NotSet": "哦，不，你还没有设置密码！",
+  "Error.Passport.Username.NotFound": "嗯，你叫什么名字？",
+  "Error.Passport.Email.NotFound": "那封邮件好像不对",
+  "Welcome to the jungle!": "欢迎来到Konga！",
+  "Go ahead and create an administrator account.": "请先创建管理员帐户。",
+  "Username": "用户名",
+  "Email": "邮箱",
+  "Password": "密码",
+  "Confirm password": "确认密码",
+  "Create Admin": "创建管理员",
+  "API Gateway": "网关配置",
+  "Save": "保存",
+  "New user created successfully": "新用户创建成功",
+  "Hosts": "主机名",
+  "new connection": "新增连接",
+  "Connection deleted successfully": "连接删除成功",
+  "LUA Version": "LUA版本",
+  "Profile": "基本信息"
+}

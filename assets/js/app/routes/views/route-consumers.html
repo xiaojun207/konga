@@ -2,9 +2,9 @@
     <div class="col-md-6 text-left">
         <h4 class="no-margin-bottom">
             <i class="mdi mdi-plug"></i>
-            Eligible Consumers
+            {{ __('Eligible Consumers') }}
         </h4>
-        <small>List of consumers with access, based on ACLs & Auth plugins</small>
+        <small>{{__('List of consumers with access, based on ACLs & Auth plugins')}}</small>
     </div>
     <div class="col-md-6 text-right">
         <list-search
@@ -78,12 +78,12 @@
 
                 <tr data-ng-if="items.length === 0 && !loading">
                     <td colspan="100%" class="text-center text-muted">
-                        <em>No data found...</em>
+                        <em>{{ __('no data found...')}}</em>
                     </td>
                 </tr>
                 <tr data-ng-if="loading">
                     <td colspan="100%" class="text-center text-muted">
-                        <em>Loading consumers...</em>
+                        <em>{{__('Loading consumers...')}}</em>
                     </td>
                 </tr>
             </table>

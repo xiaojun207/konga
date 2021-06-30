@@ -18,7 +18,7 @@
             data: {
               activeNode: true,
               pageName: "APIs",
-              pageDescription: "The API object describes an API that's being exposed by Kong. Kong needs to know how to retrieve the API when a consumer is calling it from the Proxy port. Each API object must specify a request host, a request path or both. Kong will proxy all requests to the API to the specified upstream URL.",
+              pageDescription: __("The API object describes an API that's being exposed by Kong. Kong needs to know how to retrieve the API when a consumer is calling it from the Proxy port. Each API object must specify a request host, a request path or both. Kong will proxy all requests to the API to the specified upstream URL."),
               //displayName : "apis",
               prefix: '<i class="material-icons">cloud_queue</i>'
             },
@@ -32,9 +32,9 @@
           .state('apis.edit', {
             url: '/:api_id/edit',
             data: {
-              pageName: "Edit API",
+              pageName: __("Edit API"),
               pageDescription: "",
-              displayName: "edit API",
+              displayName: __("edit API"),
               prefix: '<i class="mdi mdi-pencil"></i>'
             },
             views: {
@@ -89,8 +89,8 @@
               api: {}
             },
             data: {
-              pageName: "API Plugins",
-              displayName: "API plugins"
+              pageName: __("API Plugins"),
+              displayName: __("API Plugins")
             },
             views: {
               'content@': {
@@ -125,8 +125,8 @@
           .state('apis.plugins.manage', {
             url: '/manage',
             data: {
-              pageName: "Manage API Plugins",
-              displayName: "manage"
+              pageName: __("Manage API Plugins"),
+              displayName: __("manage")
             },
             views: {
               'content@': {

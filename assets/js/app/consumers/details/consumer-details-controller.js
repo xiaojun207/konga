@@ -30,7 +30,7 @@
               $log.debug(res.data)
               $scope.consumer = res.data
               $scope.errors = {}
-              MessageService.success("Consumer updated successfully!")
+              MessageService.success(__("Consumer updated successfully!"))
             }).catch(function (err) {
             $log.error("Failed to update consumer", err)
             $scope.handleErrors(err)

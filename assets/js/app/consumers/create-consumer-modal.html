@@ -11,7 +11,7 @@
     <form class="form-horizontal">
         <div class="form-group" ng-class="{'has-error' : errors.username}">
             <label class="col-sm-4 control-label">username <br><em>
-                <small class="help-block">semi-optional</small>
+                <small class="help-block">{{ __('semi-optional')}}</small>
             </em></label>
             <div class="col-sm-7">
                 <input ng-model="consumer.username" class="form-control">
@@ -23,7 +23,7 @@
 
         <div class="form-group" ng-class="{'has-error' : errors.custom_id}">
             <label class="col-sm-4 control-label">custom_id <br><em>
-                <small class="help-block">semi-optional</small>
+                <small class="help-block">{{ __('semi-optional')}}</small>
             </em></label>
             <div class="col-sm-7">
                 <input ng-model="consumer.custom_id" class="form-control">
@@ -36,7 +36,7 @@
 
         <div class="form-group" ng-if="isGatewayVersionEqOrGreater('1.1.0-rc1')">
             <label class="col-sm-4 control-label">Tags <br><em>
-                <small class="help-block">optional</small>
+                <small class="help-block">{{__('optional')}}</small>
             </em></label>
             <div class="col-sm-7">
                 <chips ng-model="consumer.tags">

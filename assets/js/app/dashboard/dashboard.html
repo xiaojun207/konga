@@ -5,11 +5,11 @@
             <div class="col-md-12 text-center">
                 <img src="images/conn_sync-100.png" class="margin-bottom">
                 <h3>
-                    Welcome!
+                    {{__('Welcome!')}}
                 </h3>
                 <p class="lead">
-                    No active connection to Kong Admin was found.<br>
-                    <small class="text-muted">Activate one from the <a ui-sref="connections">Connections</a> page.</small>
+                    {{__('No active connection to Kong Admin was found.')}}<br>
+                    <small class="text-muted">{{__('Activate one from the <a ui-sref="connections">Connections</a> page.')}}</small>
                 </p>
 
             </div>
@@ -18,11 +18,11 @@
             <div class="col-md-12 text-center">
                 <img src="images/conn_sync-100.png" class="margin-bottom">
                 <h3>
-                    Welcome!
+                    {{__('Welcome!')}}
                 </h3>
                 <p class="lead">
-                    First of all, lets setup a connection to Kong Admin.<br>
-                    <small class="text-muted">Select a connection type.</small>
+                    {{__('First of all, lets setup a connection to Kong Admin.')}}<br>
+                    <small class="text-muted">{{__('Select a connection type.')}}</small>
                 </p>
 
             </div>
@@ -36,11 +36,11 @@
         <div class="col-md-12 text-center">
             <img src="images/attention.png" class="margin-bottom">
             <h2>
-                Something went wrong...
+                {{ __('Something went wrong...') }}
             </h2>
             <p class="lead">
-                Failed to connect to <strong>{{user.node.name}}</strong>.<br>
-                Make sure your active <a ui-sref="connections">connection</a> is valid and Kong is up and running.
+                {{__('Failed to connect to')}} <strong>{{user.node.name}}</strong>.<br>
+                {{__('Make sure your active <a ui-sref="connections">connection</a> is valid and Kong is up and running.')}}
             </p>
 
         </div>
@@ -58,36 +58,36 @@
                 <div class="panel-heading">
                     <div class="panel-title">
                         <i class="mdi mdi-lan-connect"></i>&nbsp;
-                        CONNECTIONS
+                        {{__('CONNECTIONS')}}
                         <span class="pull-right" uib-tooltip="{{status.server.total_requests}}">
-                            Total Requests: <strong>{{convert2Unit(status.server.total_requests)}}</strong>
+                            {{__('Total Requests')}}: <strong>{{convert2Unit(status.server.total_requests)}}</strong>
                         </span>
                     </div>
                 </div>
                 <div class="panel-body">
                     <div class="row text-center">
                         <div class="col-sm-2" uib-tooltip="{{status.server.connections_active}}">
-                            <strong>ACTIVE</strong>
+                            <strong>{{__('ACTIVE')}}</strong>
                             <h3>{{convert2Unit(status.server.connections_active)}}</h3>
                         </div>
                         <div class="col-sm-2" uib-tooltip="{{status.server.connections_reading}}">
-                            <strong>READING</strong>
+                            <strong>{{__('READING')}}</strong>
                             <h3>{{convert2Unit(status.server.connections_reading)}}</h3>
                         </div>
                         <div class="col-sm-2" uib-tooltip="{{status.server.connections_writing}}">
-                            <strong>WRITING</strong>
+                            <strong>{{__('WRITING')}}</strong>
                             <h3>{{convert2Unit(status.server.connections_writing)}}</h3>
                         </div>
                         <div class="col-sm-2" uib-tooltip="{{status.server.connections_waiting}}">
-                            <strong>WAITING</strong>
+                            <strong>{{__('WAITING')}}</strong>
                             <h3>{{convert2Unit(status.server.connections_waiting)}}</h3>
                         </div>
                         <div class="col-sm-2" uib-tooltip="{{status.server.connections_accepted}}">
-                            <strong>ACCEPTED</strong>
+                            <strong>{{ __('ACCEPTED') }}</strong>
                             <h3>{{convert2Unit(status.server.connections_accepted)}}</h3>
                         </div>
                         <div class="col-sm-2" uib-tooltip="{{status.server.connections_handled}}">
-                            <strong>HANDLED</strong>
+                            <strong>{{__('HANDLED')}}</strong>
                             <h3>{{convert2Unit(status.server.connections_handled)}}</h3>
                         </div>
                     </div>
@@ -105,7 +105,7 @@
                 <div class="panel-heading">
                     <div class="panel-title">
                         <i class="mdi mdi-database"></i>&nbsp;
-                        DATABASE
+                        {{__('DATABASE')}}
                     </div>
                 </div>
                 <div class="panel-body">
@@ -124,28 +124,28 @@
             <div class="panel panel-default" vertilize>
                 <div class="panel-heading">
                     <div class="panel-title">
-                        <i class="mdi mdi-information-outline"></i>&nbsp;NODE INFO
+                        <i class="mdi mdi-information-outline"></i>&nbsp;{{__('NODE INFO')}}
                     </div>
                 </div>
                 <table class="table no-margin">
                     <tr>
-                        <th>HostName</th>
+                        <th>{{__('HostName')}}</th>
                         <td>{{info.hostname}}</td>
                     </tr>
                     <tr>
-                        <th>Tag Line</th>
+                        <th>{{__('Tag Line')}}</th>
                         <td>{{info.tagline}}</td>
                     </tr>
                     <tr>
-                        <th>Version</th>
+                        <th>{{__('Version')}}</th>
                         <td>{{info.version}}</td>
                     </tr>
                     <tr>
-                        <th>LUA Version</th>
+                        <th>{{ __('LUA Version')}}</th>
                         <td>{{info.lua_version}}</td>
                     </tr>
                     <tr>
-                        <th>Admin listen</th>
+                        <th>{{ __('Admin listen')}}</th>
                         <td>{{info.configuration.admin_listen}}</td>
                     </tr>
                 </table>
@@ -158,7 +158,7 @@
                 <div class="panel-heading">
                     <div class="panel-title">
                         <i class="mdi mdi-timer"></i>&nbsp;
-                        TIMERS
+                        {{__('TIMERS')}}
                     </div>
                 </div>
                 <div class="panel-body">
@@ -179,7 +179,7 @@
             <div class="panel panel-default" vertilize>
                 <div class="panel-heading">
                     <div class="panel-title">
-                        <i class="mdi mdi-information-outline"></i>&nbsp;DATASTORE INFO
+                        <i class="mdi mdi-information-outline"></i>&nbsp;{{ __('DATASTORE INFO') }}
                         <span ng-if="isGatewayVersionEqOrGreater('0.11.0')"
                               ng-class="{'text-success' : status.database.reachable, 'text-danger' : !status.database.reachable}"
                               class="pull-right">
@@ -189,43 +189,43 @@
                 </div>
                 <table class="table no-margin">
                     <tr>
-                        <th>DBMS</th>
+                        <th>{{__('DBMS')}}</th>
                         <td>{{info.configuration.database}}</td>
                     </tr>
                     <tr ng-if="info.configuration.database == 'postgres'">
-                        <th>Host</th>
+                        <th>{{__('Host')}}</th>
                         <td>{{info.configuration.pg_host}}</td>
                     </tr>
                     <tr ng-if="info.configuration.database == 'cassandra' && info.configuration.cassandra_contact_points">
-                        <th>Contact points</th>
+                        <th>{{__('Contact points')}}</th>
                         <td>{{info.configuration.cassandra_contact_points.join(", ")}}</td>
                     </tr>
                     <tr ng-if="info.configuration.database == 'cassandra' && info.configuration.cassandra_keyspace">
-                        <th>Keyspace</th>
+                        <th>{{ __('Keyspace') }}</th>
                         <td>{{info.configuration.cassandra_keyspace}}</td>
                     </tr>
                     <tr ng-if="info.configuration.database == 'cassandra' && info.configuration.cassandra_data_centers">
-                        <th>Data Centers</th>
+                        <th>{{__('Data Centers')}}</th>
                         <td>{{info.configuration.cassandra_data_centers.join(", ")}}</td>
                     </tr>
                     <tr ng-if="info.configuration.database == 'postgres'">
-                        <th>Database</th>
+                        <th>{{ __('Database')}}</th>
                         <td>{{info.configuration.pg_database}}</td>
                     </tr>
                     <tr ng-if="info.configuration.database == 'postgres'">
-                        <th>User</th>
+                        <th>{{__('User')}}</th>
                         <td>{{info.configuration.pg_user}}</td>
                     </tr>
                     <tr ng-if="info.configuration.database == 'cassandra'">
-                        <th>Username</th>
+                        <th>{{__('Username')}}</th>
                         <td>{{info.configuration.cassandra_username}}</td>
                     </tr>
                     <tr ng-if="info.configuration.database == 'postgres'">
-                        <th>Port</th>
+                        <th>{{__('Port')}}</th>
                         <td>{{info.configuration.pg_port}}</td>
                     </tr>
                     <tr ng-if="info.configuration.database == 'cassandra'">
-                        <th>Port</th>
+                        <th>{{__('Port')}}</th>
                         <td>{{info.configuration.cassandra_port}}</td>
                     </tr>
                 </table>
@@ -242,7 +242,7 @@
                 <div class="panel-heading">
                     <div class="panel-title">
                         <i class="mdi mdi-power-plug"></i>&nbsp;
-                        PLUGINS
+                        {{__('PLUGINS')}}
                     </div>
                 </div>
                 <div class="panel-body">
@@ -263,7 +263,7 @@
                 <div class="panel-heading">
                     <div class="panel-title">
                         <i class="mdi mdi-server-network"></i>&nbsp;
-                        CLUSTER ({{clusters.total}} nodes)
+                        {{__('CLUSTER ({0} nodes)', clusters.total)}}
                     </div>
                 </div>
                 <div class="panel-body no-padding table-responsive">

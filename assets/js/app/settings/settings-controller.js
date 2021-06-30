@@ -88,7 +88,7 @@
                 EmailTransport.update($scope.transport.id, {
                   settings: $scope.transport.settings
                 }).then(function (updated) {
-                  MessageService.success("Transport updated!")
+                  MessageService.success(__("Transport updated!"))
                   $scope.close()
                 })
               }
@@ -156,10 +156,10 @@
           })
             .then(function (settings) {
               $log.debug("Konga Settings updated", settings)
-              MessageService.success("Settings updated!")
+              MessageService.success(__("Settings updated!"))
             }, function (error) {
               $log.debug("Konga Settings failed to update", error)
-              MessageService.error("Failed to update settings!")
+              MessageService.error(__("Failed to update settings!"))
             })
         }
 

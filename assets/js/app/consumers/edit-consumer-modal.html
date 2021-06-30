@@ -10,7 +10,7 @@
 <div class="modal-body" id="modal-body">
     <form class="form-horizontal">
         <div class="form-group" ng-class="{'has-error' : errors.username}">
-            <label class="col-sm-4 control-label">username <br><em><small class="help-block">semi-optional</small></em></label>
+            <label class="col-sm-4 control-label">username <br><em><small class="help-block">{{ __('semi-optional')}}</small></em></label>
             <div class="col-sm-7">
                 <input ng-model="consumer.username" class="form-control">
                 <div class="text-danger" ng-if="errors.username" data-ng-bind="errors.username"></div>
@@ -19,7 +19,7 @@
         </div>
 
         <div class="form-group" ng-class="{'has-error' : errors.custom_id}">
-            <label class="col-sm-4 control-label">custom_id <br><em><small class="help-block">semi-optional</small></em></label>
+            <label class="col-sm-4 control-label">custom_id <br><em><small class="help-block">{{ __('semi-optional')}}</small></em></label>
             <div class="col-sm-7">
                 <input ng-model="consumer.custom_id" class="form-control">
                 <div class="text-danger" ng-if="errors.custom_id" data-ng-bind="errors.custom_id"></div>
@@ -31,7 +31,7 @@
             <div class="col-sm-offset-4 col-sm-7">
                 <button type="submit" class="btn btn-primary" ng-click="submit()">
                     <i class="mdi mdi-check"></i>
-                    Submit Changes
+                    {{ __('Submit changes') }}
                 </button>
             </div>
         </div>

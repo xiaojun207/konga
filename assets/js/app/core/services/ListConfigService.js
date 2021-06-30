@@ -615,7 +615,7 @@
               inTitle: true
             },
             {
-              title: 'Login time',
+              title: __('Login time'),
               column: 'createdAt',
               class: 'col-xs-4',
               searchable: false,

@@ -15,9 +15,9 @@
                         url: '/cluster',
                         data : {
                             activeNode : true,
-                            pageName : "Cluster",
+                            pageName : __("Cluster"),
                             // displayName : "node info",
-                            // pageDescription : "Generic details about the node"
+                            // pageDescription : __("Generic details about the node")
                         },
 
                         views: {

@@ -1,14 +1,14 @@
 <div class="col-md-12 bg-light-grey padding margin-bottom">
     <div class="col-md-6 text-left">
         <h4>
-            Routes
+            {{__('Routes')}}
 
         </h4>
     </div>
     <div class="col-md-6 text-right" ng-if="canCreate">
         <button class="btn btn-primary btn-flat" style="margin-top: 5px" ng-click="onAddRoute()">
             <i class="mdi mdi-plus"></i>
-            add route
+            {{__('add route')}}
         </button>
     </div>
 </div>
@@ -78,7 +78,7 @@
         </tr>
         <tr data-ng-if="routes.data.length === 0">
             <td colspan="100%" class="text-center text-muted">
-                <em>no data found...</em>
+                <em>{{ __('no data found...')}}</em>
             </td>
         </tr>
     </table>

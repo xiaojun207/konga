@@ -29,7 +29,7 @@
                         .update($scope.node.id, angular.copy($scope.node))
                         .then(
                             function onSuccess(result) {
-                                MessageService.success('Node updated successfully');
+                                MessageService.success(__('Node updated successfully'));
                                 $scope.busy = false;
                                 $rootScope.$broadcast('kong.node.updated',result.data);
                                 $uibModalInstance.dismiss();

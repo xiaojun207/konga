@@ -6,7 +6,7 @@
                ng-if="user.hasPermission($state.name.split('.')[0],'create')"
                class="btn btn-primary">
                 <i class="mdi mdi-plus"></i>
-                Add global plugins
+                {{__('Add global plugins')}}
             </a>
         </div>
         <list-search
@@ -95,7 +95,7 @@
                 </tr>
                 <tr data-ng-if="items.data.length === 0">
                     <td colspan="100%" class="text-center text-muted">
-                        <em>no data found...</em>
+                        <em>{{ __('no data found...')}}</em>
                     </td>
                 </tr>
             </table>

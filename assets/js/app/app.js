@@ -297,6 +297,10 @@
           return Semver.cmp($rootScope.Gateway.version, version);
         }
 
+        $scope.__ = function (s) {
+          return window.__(s)
+        }
+
         // ToDo decide whether to use Gateway Info for getting active node version and stuff...
         $scope.$on('user.node.updated', function (ev, node) {
 

@@ -76,14 +76,14 @@
                         <td ng-if="user.hasPermission('upstreams','delete')">
                             <button type="button" ng-click="deleteItem($index,item)" class="btn btn-danger btn-link">
                                 <i class="mdi mdi-delete"></i>
-                                Delete
+                                {{ __('Delete')}}
                             </button>
                         </td>
                     </tr>
 
                     <tr data-ng-if="items.length === 0 && !loading">
                         <td colspan="100%" class="text-center text-muted">
-                            <em>No data found...</em>
+                            <em>{{ __('no data found...')}}</em>
                         </td>
                     </tr>
                     <tr data-ng-if="loading">

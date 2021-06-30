@@ -3,7 +3,7 @@
         <div class="pull-left">
             <button ng-if="user.hasPermission($state.name.split('.')[0],'create')" class="btn btn-success" ng-click="openCreateItemModal()">
                 <i class="mdi mdi-plus"></i>
-                Create upstream
+                {{__('Create upstream')}}
             </button>
             <button class="btn btn-link btn-danger" ng-click="openAlertsListModal()">
                 <i class="mdi mdi-bell-outline"></i>&nbsp;
@@ -71,14 +71,14 @@
                     <td ng-if="user.hasPermission('upstreams','delete')">
                         <button type="button" ng-click="deleteItem($index,item)" class="btn btn-danger btn-link">
                             <i class="mdi mdi-delete"></i>
-                            Delete
+                            {{__('Delete')}}
                         </button>
                     </td>
                 </tr>
 
                 <tr data-ng-if="items.length === 0 && !loading">
                     <td colspan="100%" class="text-center text-muted">
-                        <em>No data found...</em>
+                        <em>{{ __('no data found...')}}</em>
                     </td>
                 </tr>
                 <tr data-ng-if="loading">

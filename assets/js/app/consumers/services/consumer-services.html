@@ -74,7 +74,7 @@
                                     <li role="menuitem">
                                         <a href ng-click="deletePlugin(item,_item)">
                                             <i class="mdi mdi-18px mdi-delete clickable"></i>&nbsp;
-                                            Delete
+                                            {{__('Delete')}}
                                         </a>
                                     </li>
                                 </ul>
@@ -86,11 +86,11 @@
                                 uib-tooltip="Add a service plugin that only targets this consumer"
                                 ng-click="onAddPlugin(item)">
                             <i class="mdi mdi-18px mdi-plus"
-                            >ADD PLUGIN</i>
+                            >{{__('ADD PLUGIN')}}</i>
                         </button>
                     </td>
                     <td width="1" class="no-wrap text-small">
-                        Routes &nbsp;<i class="mdi mdi-arrow-right"></i>
+                        {{__('Routes')}} &nbsp;<i class="mdi mdi-arrow-right"></i>
                     </td>
                     <td width="600" class="no-margin no-padding">
                         <table class="table table-condensed no-margin" ng-if="item.routes && item.routes.length">
@@ -146,7 +146,7 @@
                                                 <li role="menuitem">
                                                     <a href ng-click="deletePlugin(route,_item)">
                                                         <i class="mdi mdi-18px mdi-delete clickable"></i>&nbsp;
-                                                        Delete
+                                                        {{__('Delete')}}
                                                     </a>
                                                 </li>
                                             </ul>
@@ -158,7 +158,7 @@
                                             uib-tooltip="Add a route plugin that only targets this consumer"
                                             ng-click="onAddPlugin(route, 'route')">
                                         <i class="mdi mdi-18px mdi-plus"
-                                        >ADD PLUGIN</i>
+                                        >{{__('ADD PLUGIN')}}</i>
                                     </button>
                                 </td>
                                 <td width="1">

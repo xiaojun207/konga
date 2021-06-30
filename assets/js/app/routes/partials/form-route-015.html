@@ -8,7 +8,7 @@
 </div>
 <div class="form-group" ng-class="{'has-error' : errors.name}">
   <label class="col-sm-3 control-label"
-    >Name <br /><em><small class="help-block">optional</small></em></label
+    >Name <br /><em><small class="help-block">{{__('optional')}}</small></em></label
   >
   <div class="col-sm-9">
     <input ng-model="route.name" class="form-control" />
@@ -24,7 +24,7 @@
 </div>
 <div class="form-group" ng-if="isGatewayVersionEqOrGreater('1.1.0-rc1')">
   <label class="col-sm-3 control-label"
-    >Tags <br /><em><small class="help-block">optional</small></em></label
+    >Tags <br /><em><small class="help-block">{{__('optional')}}</small></em></label
   >
   <div class="col-sm-9">
     <chips ng-model="route.tags">
@@ -48,7 +48,7 @@
 </div>
 <div class="form-group" ng-class="{'has-error' : errors.hosts}">
   <label class="col-sm-3 control-label"
-    >Hosts <br /><em><small class="help-block">semi-optional</small></em></label
+    >Hosts <br /><em><small class="help-block">{{ __('semi-optional')}}</small></em></label
   >
   <div class="col-sm-9">
     <chips ng-model="route.hosts">
@@ -74,7 +74,7 @@
 </div>
 <div class="form-group" ng-class="{'has-error' : errors.paths}">
   <label class="col-sm-3 control-label"
-    >Paths <br /><em><small class="help-block">semi-optional</small></em></label
+    >Paths <br /><em><small class="help-block">{{ __('semi-optional')}}</small></em></label
   >
   <div class="col-sm-9">
     <chips ng-model="route.paths">
@@ -97,7 +97,7 @@
 <div class="form-group" ng-class="{'has-error' : errors.headers}">
   <label class="col-sm-3 control-label"
     >Headers <br /><em
-      ><small class="help-block">semi-optional</small></em
+      ><small class="help-block">{{ __('semi-optional')}}</small></em
     ></label
   >
   <div class="col-sm-9">
@@ -143,7 +143,7 @@
 >
   <label class="col-sm-3 control-label"
     >Https redirect status code <br /><em
-      ><small class="help-block">optional</small></em
+      ><small class="help-block">{{__('optional')}}</small></em
     ></label
   >
   <div class="col-sm-9">
@@ -164,7 +164,7 @@
 <div class="form-group" ng-class="{'has-error' : errors.regex_priority}">
   <label class="col-sm-3 control-label"
     >Regex priority <br /><em
-      ><small class="help-block">optional</small></em
+      ><small class="help-block">{{__('optional')}}</small></em
     ></label
   >
   <div class="col-sm-9">
@@ -182,7 +182,7 @@
 <div class="form-group" ng-class="{'has-error' : errors.methods}">
   <label class="col-sm-3 control-label"
     >Methods <br /><em
-      ><small class="help-block">semi-optional</small></em
+      ><small class="help-block">{{ __('semi-optional')}}</small></em
     ></label
   >
   <div class="col-sm-9">
@@ -204,7 +204,7 @@
 </div>
 <div class="form-group">
   <label class="col-sm-3 control-label"
-    >Strip Path <br /><em><small class="help-block">optional</small></em></label
+    >Strip Path <br /><em><small class="help-block">{{__('optional')}}</small></em></label
   >
   <div class="col-sm-9">
     <input
@@ -223,8 +223,8 @@
 </div>
 <div class="form-group">
   <label class="col-sm-3 control-label"
-    >Preserve Host <br /><em
-      ><small class="help-block">optional</small></em
+    >{{__('Preserve Host')}} <br /><em
+      ><small class="help-block">{{__('optional')}}</small></em
     ></label
   >
   <div class="col-sm-9">
@@ -247,7 +247,7 @@
 <div class="form-group" ng-class="{'has-error' : errors.protocols}">
   <label class="col-sm-3 control-label"
     >Protocols <br /><em
-      ><small class="help-block">semi-optional</small></em
+      ><small class="help-block">{{ __('semi-optional')}}</small></em
     ></label
   >
   <div class="col-sm-9">
@@ -271,7 +271,7 @@
 
 <div class="form-group" ng-class="{'has-error' : errors.snis}">
   <label class="col-sm-3 control-label"
-    >SNIs <br /><em><small class="help-block">semi-optional</small></em></label
+    >SNIs <br /><em><small class="help-block">{{ __('semi-optional')}}</small></em></label
   >
   <div class="col-sm-9">
     <chips ng-model="route.snis">
@@ -294,7 +294,7 @@
 <div class="form-group" ng-class="{'has-error' : errors.sources}">
   <label class="col-sm-3 control-label"
     >Sources <br /><em
-      ><small class="help-block">semi-optional</small></em
+      ><small class="help-block">{{ __('semi-optional')}}</small></em
     ></label
   >
   <div class="col-sm-9">
@@ -324,7 +324,7 @@
 <div class="form-group" ng-class="{'has-error' : errors.destinations}">
   <label class="col-sm-3 control-label"
     >Destinations <br /><em
-      ><small class="help-block">semi-optional</small></em
+      ><small class="help-block">{{ __('semi-optional')}}</small></em
     ></label
   >
   <div class="col-sm-9">

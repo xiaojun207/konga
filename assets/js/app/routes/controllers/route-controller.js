@@ -32,7 +32,7 @@
             isVisible: true
           },
           {
-            name: 'Eligible consumers <span class="label label-danger">beta</span>',
+            name: __('Eligible consumers') + ' <span class="label label-danger">beta</span>',
             icon: 'mdi mdi-account-multiple-outline',
             isVisible: true
           },

@@ -145,7 +145,7 @@
 
               ApiService.resetHealthChecks()
                 .then(function (success) {
-                  MessageService.success('API Healthchecks reset successfully!')
+                  MessageService.success(__('API Healthchecks reset successfully!'))
 
                   $scope.items.data.forEach(function (api) {
                     delete api.health_checks;

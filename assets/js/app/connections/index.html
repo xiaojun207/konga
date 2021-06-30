@@ -13,7 +13,7 @@
     <div class="col-md-12 actions">
         <button class="btn btn-primary pull-left" ng-click="createNode()" ng-if="user.admin">
             <i class="mdi mdi-plus"></i>
-            new connection
+            {{ __('new connection')}}
         </button>
         <list-search
                 class="pull-right margin-right"
@@ -114,7 +114,7 @@
 
             <tr data-ng-if="nodes.length === 0">
                 <td colspan="100%" class="text-center">
-                    <h5>No connections found...</h5>
+                    <h5>{{__('No connections found...')}}</h5>
                 </td>
             </tr>
         </table>

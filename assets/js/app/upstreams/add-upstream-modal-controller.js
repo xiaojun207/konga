@@ -62,7 +62,7 @@
             .then(
               function onSuccess(result) {
                 $log.debug("AddUpstreamModalController:created upstream", result)
-                MessageService.success('New upstream created successfully');
+                MessageService.success(__('New upstream created successfully'));
                 $scope.busy = false;
                 $rootScope.$broadcast('kong.upstream.created', result.data)
                 $uibModalInstance.dismiss()

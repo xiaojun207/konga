@@ -25,14 +25,14 @@
         // User delete dialog buttons configuration
         $scope.confirmButtonsDelete = {
           ok: {
-            label: 'Delete',
+            label: __('Delete'),
             className: 'btn-danger btn-link',
             callback: function callback() {
               $scope.deleteUser();
             }
           },
           cancel: {
-            label: 'Cancel',
+            label: __('Cancel'),
             className: 'btn-default btn-link'
           }
         };
@@ -58,7 +58,7 @@
             .then(
               function onSuccess(data) {
                 $scope.showForm = false;
-                MessageService.success('User "' + $scope.user.username + '" updated successfully');
+                MessageService.success(__('User "{0}" updated successfully', $scope.user.username));
                 initUserPassports()
                 UserService.updateUser(data.data, true)
                 deferred.resolve(true);
@@ -78,7 +78,7 @@
             .delete($scope.user.id)
             .then(
               function onSuccess() {
-                MessageService.success('User "' + $scope.user.username + '" deleted successfully');
+                MessageService.success(__('User "%s" deleted successfully', $scope.user.username));
                 $state.go('users');
               }
             ).catch(err => {

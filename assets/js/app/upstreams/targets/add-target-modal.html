@@ -28,7 +28,7 @@
         </div>
         <div class="form-group" ng-class="{'has-error' : errors.weight}">
             <label class="col-sm-4 control-label">Weight
-                <br><em><small class="help-block">optional</small></em></label>
+                <br><em><small class="help-block">{{__('optional')}}</small></em></label>
             <div class="col-sm-7">
                 <input type="number" ng-model="item.weight" class="form-control">
                 <div class="text-danger" ng-if="errors.weight" data-ng-bind="errors.weight"></div>

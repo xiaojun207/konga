@@ -88,7 +88,7 @@
           RoutesService.add(data)
             .then(function (res) {
               $rootScope.$broadcast('route.created')
-              MessageService.success('Route created!')
+              MessageService.success(__('Route created!'))
               $uibModalInstance.dismiss(res);
             }).catch(function (err) {
             $log.error("Create new route error:", err)

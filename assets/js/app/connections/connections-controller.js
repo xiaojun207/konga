@@ -34,7 +34,7 @@
 
         $scope.updateSettings = function () {
           SettingsService.setSettings($scope.general_settings)
-          MessageService.success('Settings updated successfully!')
+          MessageService.success(__('Settings updated successfully!'))
         }
 
         // Initialize used title items
@@ -107,7 +107,7 @@
             }
           },
           cancel: {
-            label: 'Cancel',
+            label: __('Cancel'),
             className: 'btn-default btn-link'
           }
         };
@@ -132,7 +132,7 @@
                 .then(
                   function onSuccess(data) {
                     if (data.status < 204) {
-                      MessageService.success('Connection deleted successfully');
+                      MessageService.success(__('Connection deleted successfully'));
                       $rootScope.$broadcast('kong.node.deleted', node)
                       _triggerFetchData()
                     }
@@ -504,7 +504,7 @@
               })
               .then(
                 function onSuccess(result) {
-                  MessageService.success('Active node version updated');
+                  MessageService.success(__('Active node version updated'));
                   $rootScope.$broadcast('kong.node.updated',result.data);
                 },function(err){
                   NodeModel.handleError($scope,err);

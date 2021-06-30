@@ -14,8 +14,8 @@
             url: '/healthchecks',
             data: {
               activeNode: true,
-              pageName: "Health Checks",
-              pageDescription: "Manage API healthchecks",
+              pageName: __("Health Checks"),
+              pageDescription: __("Manage API healthchecks"),
               prefix: '<i class="mdi mdi-heart"></i>'
             },
             views: {

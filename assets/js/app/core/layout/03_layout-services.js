@@ -19,7 +19,7 @@
             show : function() {
               return AuthService.isAuthenticated()
             },
-            title: 'Dashboard',
+            title: __('Dashboard'),
             access: AccessLevels.user
           },
           {
@@ -27,7 +27,7 @@
             show : function() {
               return AuthService.isAuthenticated() && $rootScope.Gateway
             },
-            title: 'Routes',
+            title: __('Routes'),
             icon : 'mdi-cloud-outline',
             access: AccessLevels.user
           },
@@ -36,7 +36,7 @@
             show : function() {
               return AuthService.isAuthenticated() && $rootScope.Gateway
             },
-            title: 'Services',
+            title: __('Services'),
             icon : 'mdi-cloud-outline',
             access: AccessLevels.user
           },
@@ -45,7 +45,7 @@
             show : function() {
               return AuthService.isAuthenticated() && $rootScope.Gateway
             },
-            title: 'APIs',
+            title: __('APIs'),
             icon : 'mdi-cloud-outline',
             access: AccessLevels.user
           },
@@ -54,7 +54,7 @@
             show : function() {
               return AuthService.isAuthenticated() && $rootScope.Gateway
             },
-            title: 'Consumers',
+            title: __('Consumers'),
             icon : 'mdi-account-outline',
             access: AccessLevels.user
           },
@@ -64,7 +64,7 @@
             show : function() {
               return AuthService.isAuthenticated() && $rootScope.Gateway
             },
-            title: 'Plugins',
+            title: __('Plugins'),
             access: AccessLevels.anon
           },
           {
@@ -73,7 +73,7 @@
             show : function() {
               return AuthService.isAuthenticated() && UserService.user().node && $rootScope.Gateway && $rootScope.Gateway.version.indexOf("0.10.") > -1
             },
-            title: 'Upstreams',
+            title: __('Upstreams'),
             access: AccessLevels.anon
           },
           {
@@ -82,7 +82,7 @@
             show : function() {
               return AuthService.isAuthenticated() && UserService.user().node && $rootScope.Gateway && $rootScope.Gateway.version.indexOf("0.10.") > -1
             },
-            title: 'Certificates',
+            title: __('Certificates'),
             access: AccessLevels.anon
           }
         ];

@@ -135,7 +135,7 @@
                     data-ng-disabled="busy" class="btn btn-primary btn-block" ng-click="addPlugin()">
                 <i class="mdi mdi-check" ng-if="!busy"></i>
                 <fading-circle-spinner class="spinner spinner-invert pull-left" ng-if="busy"></fading-circle-spinner>
-                add plugin
+                {{__('add plugin')}}
             </button>
 
             <button type="button"
@@ -143,7 +143,7 @@
                     data-ng-disabled="busy" class="btn btn-primary btn-block" ng-click="updatePlugin()">
                 <i class="mdi mdi-check" ng-if="!busy"></i>
                 <fading-circle-spinner class="spinner spinner-invert pull-left" ng-if="busy"></fading-circle-spinner>
-                submit changes
+                {{ __('Submit changes') }}
             </button>
         </div>
     </div>

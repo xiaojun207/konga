@@ -20,7 +20,7 @@
         $scope.activeSection = 0;
         $scope.sections = [
           {
-            name: 'Service Details',
+            name: __('Service Details'),
             icon: 'mdi mdi-information-outline',
             isVisible: true
           },
@@ -35,7 +35,7 @@
             isVisible: AuthService.hasPermission('plugins','read')
           },
           {
-            name: 'Eligible consumers <span class="label label-danger">beta</span>',
+            name: __('Eligible consumers') + ' <span class="label label-danger">beta</span>',
             icon: 'mdi mdi-account-multiple-outline',
             isVisible: true
           },

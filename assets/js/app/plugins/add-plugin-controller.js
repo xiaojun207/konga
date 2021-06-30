@@ -179,7 +179,7 @@
               console.log("create plugin", res)
               $scope.busy = false;
               $rootScope.$broadcast('plugin.added', res.data)
-              MessageService.success('Plugin added successfully!')
+              MessageService.success(__('Plugin added successfully!'))
               $uibModalInstance.dismiss(res.data)
               if (back) $state.go('plugins');// return to plugins page if specified
             }, function (err) {
@@ -197,7 +197,7 @@
                 }
                 $scope.errorMessage = errorBody.message || '';
               } else {
-                $scope.errorMessage = "An unknown error has occured"
+                $scope.errorMessage = __("An unknown error has occured")
               }
 
               MessageService.error($scope.errorMessage);

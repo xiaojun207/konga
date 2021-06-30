@@ -117,7 +117,7 @@
                                 $scope.submitting = true;
                                 SnapshotsService.snapshot($scope.snapshot.name,$scope.node.id)
                                   .then(function(response){
-                                      MessageService.success('Snapshot Created!');
+                                      MessageService.success(__('Snapshot Created!'));
                                       $scope.submitting = false;
 
                                       $uibModalInstance.dismiss({
@@ -155,7 +155,7 @@
                         }
                     },
                     cancel: {
-                        label: 'Cancel',
+                        label: __('Cancel'),
                         className: 'btn-default btn-link'
                     }
                 };
@@ -167,7 +167,7 @@
                         .delete(snapshot.id)
                         .then(
                             function onSuccess(data) {
-                                MessageService.success('Snapshot deleted successfully');
+                                MessageService.success(__('Snapshot deleted successfully'));
                                 _triggerFetchData()
                             }
                         )
@@ -284,7 +284,7 @@
 
 
                 $scope.$on('snapshots.created',function(ev,message){
-                    // MessageService.success("Snapshot created!")
+                    // MessageService.success(__("Snapshot created!"))
                     _triggerFetchData();
                 })
 

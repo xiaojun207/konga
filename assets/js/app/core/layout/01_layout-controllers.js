@@ -166,7 +166,7 @@
                 }, function (err) {
                   $scope.busy = false
                   UserModel.handleError($scope, err)
-                  MessageService.error(_.get(err, 'data.message', 'Something went wrong...'))
+                  MessageService.error(_.get(err, 'data.message', __('Something went wrong...')))
                 }
               );
 
@@ -231,11 +231,11 @@
             show: function () {
               return AuthService.isAuthenticated()
             },
-            title: 'Dashboard',
+            title: __('Dashboard'),
             access: AccessLevels.user
           },
           {
-            title: 'API Gateway',
+            title: __('API Gateway'),
             show: function () {
               return AuthService.isAuthenticated() && $rootScope.Gateway
             },
@@ -246,7 +246,7 @@
             show: function () {
               return AuthService.isAuthenticated() && $rootScope.Gateway
             },
-            title: 'Info',
+            title: __('Info'),
             icon: 'mdi-information-outline',
             access: AccessLevels.admin
           },
@@ -255,7 +255,7 @@
             show: function () {
               return AuthService.hasPermission('services', 'read') && $rootScope.isGatewayVersionEqOrGreater('0.13.0')
             },
-            title: 'Services',
+            title: __('Services'),
             icon: 'mdi-cloud-outline',
             access: AccessLevels.user
           },
@@ -264,7 +264,7 @@
             show: function () {
               return AuthService.hasPermission('routes', 'read') && $rootScope.isGatewayVersionEqOrGreater('0.13.0')
             },
-            title: 'Routes',
+            title: __('Routes'),
             icon: 'mdi-directions-fork',
             access: AccessLevels.user
           },
@@ -282,7 +282,7 @@
             show: function () {
               return AuthService.hasPermission('consumers', 'read') && $rootScope.Gateway
             },
-            title: 'Consumers',
+            title: __('Consumers'),
             icon: 'mdi-account-outline',
             access: AccessLevels.user
           },
@@ -292,7 +292,7 @@
             show: function () {
               return AuthService.hasPermission('plugins', 'read') && $rootScope.Gateway
             },
-            title: 'Plugins',
+            title: __('Plugins'),
             access: AccessLevels.anon
           },
           {
@@ -301,7 +301,7 @@
             show: function () {
               return AuthService.hasPermission('upstreams', 'read') && UserService.user().node && $rootScope.isGatewayVersionEqOrGreater('0.10.0');
             },
-            title: 'Upstreams',
+            title: __('Upstreams'),
             access: AccessLevels.anon
           },
           {
@@ -310,11 +310,11 @@
             show: function () {
               return AuthService.hasPermission('certificates', 'read') && UserService.user().node && $rootScope.isGatewayVersionEqOrGreater('0.10.0');
             },
-            title: 'Certificates',
+            title: __('Certificates'),
             access: AccessLevels.anon
           },
           {
-            title: 'Application',
+            title: __('Application'),
             show: function () {
               return AuthService.hasPermission('users', 'read') || AuthService.hasPermission('connections', 'read');
             },
@@ -327,7 +327,7 @@
               if(window.no_auth) return false;
               return AuthService.isAuthenticated() && AuthService.hasPermission('users', 'read');
             },
-            title: 'Users',
+            title: __('Users'),
             access: AccessLevels.anon
           },
           {
@@ -336,7 +336,7 @@
             show: function () {
               return AuthService.isAuthenticated() && AuthService.hasPermission('connections', 'read');
             },
-            title: 'Connections',
+            title: __('Connections'),
             access: AccessLevels.anon
           },
           {
@@ -345,7 +345,7 @@
             show: function () {
               return AuthService.authorize(AccessLevels.admin);
             },
-            title: 'Snapshots',
+            title: __('Snapshots'),
             access: AccessLevels.admin
           },
           // {
@@ -363,7 +363,7 @@
             show: function () {
               return AuthService.authorize(AccessLevels.admin);
             },
-            title: 'Settings',
+            title: __('Settings'),
             access: AccessLevels.admin
           },
         ];

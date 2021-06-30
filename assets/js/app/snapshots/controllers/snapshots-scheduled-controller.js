@@ -301,11 +301,11 @@
                     }).then(function (updated) {
                         item.active = updated.data.active;
 
-                        MessageService.success("Scheduled job " + ( item.active ? "started" : "stopped"));
+                        MessageService.success(__("Scheduled job") + " " + __( item.active ? "started" : "stopped"));
 
                     }).catch(function (err) {
                        console.error("Failed to update Schedule", err);
-                       MessageService.error("Something went wrong...","Could not update schedule");
+                       MessageService.error(__("Something went wrong..."),"Could not update schedule");
                     });
                 }
 

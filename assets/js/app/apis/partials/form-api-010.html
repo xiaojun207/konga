@@ -1,48 +1,48 @@
 <div class="form-group" ng-class="{'has-error' : errors.name}">
-    <label class="col-sm-4 control-label">Name <br><em><small class="help-block">optional</small></em></label>
+    <label class="col-sm-4 control-label">{{__('Name')}} <br><em><small class="help-block">{{__('optional')}}</small></em></label>
     <div class="col-sm-7">
         <input ng-model="api.name" class="form-control">
         <div class="text-danger" ng-if="errors.name" data-ng-bind="errors.name"></div>
-        <p class="help-block">The API name. If none is specified, will default to the <code>request_host</code> or <code>request_path</code>.</p>
+        <p class="help-block">{{ __('The API name. If none is specified, will default to the <code>request_host</code> or <code>request_path</code>.') }}</p>
     </div>
 </div>
 <div class="form-group" ng-class="{'has-error' : errors.hosts}">
-    <label class="col-sm-4 control-label">Hosts <br><em><small class="help-block">semi-optional</small></em></label>
+    <label class="col-sm-4 control-label">{{ __('Hosts') }} <br><em><small class="help-block">{{ __('semi-optional')}}</small></em></label>
     <div class="col-sm-7">
         <input ng-model="api.hosts" class="form-control">
         <div class="text-danger" ng-if="errors.hosts" data-ng-bind="errors.hosts"></div>
-        <p class="help-block">A comma-separated list of domain names that point to your API. For example: <code>example.com</code>. At least one of <code>hosts</code>, <code>uris</code>, or <code>methods</code> should be specified.</p>
+        <p class="help-block">{{__('A comma-separated list of domain names that point to your API. For example: <code>example.com</code>. At least one of <code>hosts</code>, <code>uris</code>, or <code>methods</code> should be specified.')}}</p>
     </div>
 </div>
 <div class="form-group" ng-class="{'has-error' : errors.uris}">
-    <label class="col-sm-4 control-label">Uris <br><em><small class="help-block">semi-optional</small></em></label>
+    <label class="col-sm-4 control-label">Uris <br><em><small class="help-block">{{ __('semi-optional')}}</small></em></label>
     <div class="col-sm-7">
         <input ng-model="api.uris" class="form-control">
         <div class="text-danger" ng-if="errors.uris" data-ng-bind="errors.uris"></div>
-        <p class="help-block">A comma-separated list of URIs prefixes that point to your API. For example: <code>/my-path</code>. At least one of <code>hosts</code>, <code>uris</code>, or <code>methods</code> should be specified.</p>
+        <p class="help-block">{{__('A comma-separated list of URIs prefixes that point to your API. For example: <code>/my-path</code>. At least one of <code>hosts</code>, <code>uris</code>, or <code>methods</code> should be specified.')}}</p>
     </div>
 </div>
 <div class="form-group" ng-class="{'has-error' : errors.methods}">
-    <label class="col-sm-4 control-label">Methods <br><em><small class="help-block">semi-optional</small></em></label>
+    <label class="col-sm-4 control-label">Methods <br><em><small class="help-block">{{ __('semi-optional')}}</small></em></label>
     <div class="col-sm-7">
         <input ng-model="api.methods" class="form-control">
         <div class="text-danger" ng-if="errors.methods" data-ng-bind="errors.methods"></div>
-        <p class="help-block">A comma-separated list of HTTP methods that point to your API. For example: <code>GET</code>,<code>POST</code>. At least one of <code>hosts</code>, <code>uris</code>, or <code>methods</code> should be specified.</p>
+        <p class="help-block">{{__('A comma-separated list of HTTP methods that point to your API. For example: <code>GET</code>,<code>POST</code>. At least one of <code>hosts</code>, <code>uris</code>, or <code>methods</code> should be specified.')}}</p>
     </div>
 </div>
 <div class="form-group " ng-class="{'has-error' : errors.upstream_url}">
-    <label class="col-sm-4 control-label">Upstream URL</label>
+    <label class="col-sm-4 control-label">{{ __('Upstream URL')}}</label>
     <div class="col-sm-7">
         <input type="url" ng-model="api.upstream_url" class="form-control">
         <div class="text-danger" ng-if="errors.upstream_url" data-ng-bind="errors.upstream_url"></div>
         <p class="help-block">
-            The base target URL that points to your API server, this URL will be used for proxying requests. For example, <code>https://mockbin.com</code>.
+            {{__('The base target URL that points to your API server, this URL will be used for proxying requests. For example, <code>https://mockbin.com</code>.')}}
         </p>
     </div>
 </div>
 <div class="form-group">
     <label class="col-sm-4 control-label">Strip uri
-        <br><em><small class="help-block">optional</small></em></label>
+        <br><em><small class="help-block">{{__('optional')}}</small></em></label>
     <div class="col-sm-7">
         <input
 
@@ -59,8 +59,8 @@
     </div>
 </div>
 <div class="form-group">
-    <label class="col-sm-4 control-label">Preserve Host
-        <br><em><small class="help-block">optional</small></em></label>
+    <label class="col-sm-4 control-label">{{__('Preserve Host')}}
+        <br><em><small class="help-block">{{__('optional')}}</small></em></label>
     <div class="col-sm-7">
         <input
 
@@ -77,7 +77,7 @@
     </div>
 </div>
 <div class="form-group" ng-class="{'has-error' : errors.retries}">
-    <label class="col-sm-4 control-label">Retries <br><em><small class="help-block">optional</small></em></label>
+    <label class="col-sm-4 control-label">Retries <br><em><small class="help-block">{{__('optional')}}</small></em></label>
     <div class="col-sm-7">
         <input type="number" ng-model="api.retries" class="form-control">
         <div class="text-danger" ng-if="errors.retries" data-ng-bind="errors.retries"></div>
@@ -85,7 +85,7 @@
     </div>
 </div>
 <div class="form-group" ng-class="{'has-error' : errors.upstream_connect_timeout}">
-    <label class="col-sm-4 control-label">Upstream connect timeout <br><em><small class="help-block">optional</small></em></label>
+    <label class="col-sm-4 control-label">Upstream connect timeout <br><em><small class="help-block">{{__('optional')}}</small></em></label>
     <div class="col-sm-7">
         <input type="number" ng-model="api.upstream_connect_timeout" class="form-control">
         <div class="text-danger" ng-if="errors.upstream_connect_timeout" data-ng-bind="errors.upstream_connect_timeout"></div>
@@ -93,7 +93,7 @@
     </div>
 </div>
 <div class="form-group" ng-class="{'has-error' : errors.upstream_send_timeout}">
-    <label class="col-sm-4 control-label">Upstream send timeout <br><em><small class="help-block">optional</small></em></label>
+    <label class="col-sm-4 control-label">Upstream send timeout <br><em><small class="help-block">{{__('optional')}}</small></em></label>
     <div class="col-sm-7">
         <input type="number" ng-model="api.upstream_send_timeout" class="form-control">
         <div class="text-danger" ng-if="errors.upstream_send_timeout" data-ng-bind="errors.upstream_send_timeout"></div>
@@ -101,7 +101,7 @@
     </div>
 </div>
 <div class="form-group" ng-class="{'has-error' : errors.upstream_read_timeout}">
-    <label class="col-sm-4 control-label">Upstream read timeout <br><em><small class="help-block">optional</small></em></label>
+    <label class="col-sm-4 control-label">Upstream read timeout <br><em><small class="help-block">{{__('optional')}}</small></em></label>
     <div class="col-sm-7">
         <input type="number" ng-model="api.upstream_read_timeout" class="form-control">
         <div class="text-danger" ng-if="errors.upstream_read_timeout" data-ng-bind="errors.upstream_read_timeout"></div>
@@ -110,7 +110,7 @@
 </div>
 <div class="form-group">
     <label class="col-sm-4 control-label">Https only
-        <br><em><small class="help-block">optional</small></em></label>
+        <br><em><small class="help-block">{{__('optional')}}</small></em></label>
     <div class="col-sm-7">
         <input
 
@@ -128,7 +128,7 @@
 </div>
 <div class="form-group">
     <label class="col-sm-4 control-label">Http if terminated
-        <br><em><small class="help-block">optional</small></em></label>
+        <br><em><small class="help-block">{{__('optional')}}</small></em></label>
     <div class="col-sm-7">
         <input
 
