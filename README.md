@@ -5,6 +5,8 @@
 
 _Konga is not an official app. No affiliation with [Kong](https://www.konghq.com/)._
 
+The project is base of https://github.com/pantsel/konga.git, I add international (Chinese) support.
+
 ## 增加国际化（中文）支持（Add international (Chinese) support）
     
     增加页面国际化，并增加中文界面支持
