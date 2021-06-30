@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.14.9](https://github.com/xiaojun207/konga/releases/tag/0.14.9)
+## [1.0.1](https://github.com/xiaojun207/konga/releases/tag/1.0.1)
 * Fix security issue that allowed a user to escalate to admin status. (Kudos to [j3ssie](https://github.com/j3ssie)).
 * Fix XSS vulnerabity on alerts and notifications. (Kudos to [j3ssie](https://github.com/j3ssie)).
 * Fix issues #555, #562. Initial registration allows multiple admin users to be created

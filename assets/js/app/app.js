@@ -10,6 +10,7 @@
   angular.module('frontend', [
     'angular-spinkit',
     //'frontend-templates',
+    'frontend._i18n',
     'frontend.core',
     'frontend.dashboard',
     'frontend.settings',
@@ -29,7 +30,6 @@
     'frontend.routes'
 
   ]);
-
 
   /**
    * Configuration for frontend application, this contains following main sections:
@@ -297,9 +297,8 @@
           return Semver.cmp($rootScope.Gateway.version, version);
         }
 
-        $scope.__ = function (s) {
-          return window.__(s)
-        }
+        console.log("__i18n.app.init");
+        $scope.__ = window.__
 
         // ToDo decide whether to use Gateway Info for getting active node version and stuff...
         $scope.$on('user.node.updated', function (ev, node) {

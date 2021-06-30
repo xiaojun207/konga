@@ -1,3 +1,4 @@
+
 String.prototype.format = function(args) {
     var result = this;
     if (arguments.length > 0) {
@@ -20,21 +21,20 @@ String.prototype.format = function(args) {
     }
     return result;
 }
-// var str = 'test{0},kwkw{1}';
-// alert(str.format('jd','taobao'));
 
-lang = window.navigator.languages ?
+var lang = window.navigator.languages ?
     window.navigator.languages[0] :
     (window.navigator.language || window.navigator.userLanguage);
 
 window.i18nResource = i18n_zh_CN
 
-const __ = function (s, ...args) {
+var _i18n = function (s, ...args) {
     if(!window.i18nResource){
         return s
     }
     let m = window.i18nResource[s]
     if (m) {
+        console.log("i18n:", s, m)
         if(args && args.length>0)
             return m.format(args)
         return m
@@ -43,5 +43,14 @@ const __ = function (s, ...args) {
         return s
     }
 };
+var __ = _i18n
+window.__ = _i18n;
+console.log("__i18n.init");
 
-window.__ = __
+(function() {
+    'use strict';
+
+    // Define frontend.i18n module
+    angular.module('frontend._i18n', []);
+
+}());
