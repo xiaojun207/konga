@@ -258,7 +258,7 @@ Then stop the app and run it again in production mode.
 
 if you're using docker, you can lift an ephemeral container, as stated before:
 ```
-$ docker run --rm xiaojun207/konga-cn:latest -c prepare -a {{adapter}} -u {{connection-uri}}
+$ docker run --rm xiaojun207/konga:latest -c prepare -a {{adapter}} -u {{connection-uri}}
 ```
 
 ## FAQ
