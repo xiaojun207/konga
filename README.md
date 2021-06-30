@@ -24,6 +24,23 @@ The project is base of https://github.com/pantsel/konga.git, I add international
     locales: ['zh'],
     defaultLocale: 'zh',
 
+## Quick Start
+
+### Start by docker
+```
+    docker run -d -p 1337:1337 --name konga-cn -e "NODE_ENV=production" -e "TOKEN_SECRET={{somerandomstring}}" xiaojun207/konga:latest
+```
+
+### Start dev
+```
+    yarn start
+```
+or
+```
+    npm run start
+```
+
+
 ### Support the project
 If you find Konga helpful, 
 you can show your support and help me continue maintaining the project by [buying me a coffee](https://github.com/xiaojun207/konga)
